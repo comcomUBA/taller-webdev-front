@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    height: 20dvh;
+
+    color: white;
+    background-color: mediumslateblue;
+    box-shadow: inset 0 0 0 5px navy;
+
+    font-size: 1.5em;
+}
+
+main {
+    height: 70dvh;
+
+    color: black;
+    background-color: khaki;
+    box-shadow: inset 0 0 0 5px darkkhaki;
+
+    font-size: 5em;
+    font-weight: bolder;
+}
+
+footer {
+    height: 10dvh;
+
+    color: white;
+    background-color: crimson;
+    box-shadow: inset 0 0 0 5px maroon;
+
+    font-size: 1.5em;
+}
+
+a, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
