@@ -1,0 +1,8 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+    \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}itemize\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}item} Mate
+    \PYG{k}{\PYGZbs{}item} Café
+    \PYG{k}{\PYGZbs{}item} Harina
+    \PYG{k}{\PYGZbs{}item} Palmitos
+    \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}itemize\PYG{n+nb}{\PYGZcb{}}
+\end{MintedVerbatim}

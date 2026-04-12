@@ -1,0 +1,22 @@
+\frametitle{Estructura principal}
+
+    Las tags más importante que cualquier sitio debe tener son \textbf{html},
+    \textbf{head} y \textbf{body}. La primera es la que define los límites del documento,
+    sin esa tag no existe nada. La segunda es para definir información relevante
+    al sitio pero que no va a ser visible para el usuario, eso incluye metadatos
+    y un poco de información extra para que el navegador sepa como interpretar el
+    sitio. Por último, \textbf{body} es donde va el contenido del sitio, básicamente todo.
+
+    Cualquier sitio normal sigue el siguiente esquema:
+
+    \begin{lstlisting}
+<html>
+    <head>
+        Metadatos, estilo, etc...
+    </head>
+    <body>
+        Contenido
+    </body>
+</html>
+    \end{lstlisting}
+

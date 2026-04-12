@@ -1,0 +1,153 @@
+\section{HTML}\label{sec:HTML}
+
+\begin{frame}
+    \frametitle{Hypertext Markup Language (HTML)}
+    
+    HTML es un lenguaje para armar documentos. ``Hypertext'' se 
+    refiere a los links que conectan los distintos sitios y documentos. 
+    ``Markup'' se refiere a que se usa una sintaxis particular para 
+    marcar cómo se debería estructurar el contenido.
+
+    La sintaxis de HTML consiste en el uso de \emph{tags}. Hay alrededor de 
+    140 de estas tags, pero lo normal es usar un subconjunto bastante 
+    más chico de ellas. 
+    
+    Las tags tienen el formato \emph{$<$tag propiedades$>$Contenido$</$tag$>$} o \\
+    \emph{$<$tag propiedades$/>$} para elementos sin contenido. Dicho contenido 
+    podría ser texto o incluso otras tags. Veamos cuáles son las tags más importantes.
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Estructura principal}
+    
+    Las tags más importante que cualquier sitio debe tener son \textbf{html}, 
+    \textbf{head} y \textbf{body}. La primera es la que define los límites del documento, 
+    sin esa tag no existe nada. La segunda es para definir información relevante 
+    al sitio pero que no va a ser visible para el usuario, eso incluye metadatos 
+    y un poco de información extra para que el navegador sepa como interpretar el 
+    sitio. Por último, \textbf{body} es donde va el contenido del sitio, básicamente todo.
+
+    Cualquier sitio normal sigue el siguiente esquema:
+
+    \begin{lstlisting}
+<html>
+    <head>
+        Metadatos, estilo, etc...
+    </head>
+    <body>
+        Contenido
+    </body>
+</html>
+    \end{lstlisting}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Contenidos de \emph{head}, metadatos}
+    
+    \begin{itemize}
+        \item \textbf{title} se usa para elegir el título de la página. Dicho 
+              título es el que se ve en la pestaña correspondiente del navegador.
+        \item \textbf{link} define relaciones con recursos externos al documento. 
+              Se usa principalmente para elegir la hoja de estilos (CSS) pero 
+              también otras cosas como el ícono del sitio (suele aparecer al 
+              lado del título). En el caso más general usa la propiedad 
+              \emph{href} para definir la dirección del recurso y \emph{rel} para 
+              especificar cual es dicha relación.
+        \item \textbf{style} permite agregar estilo directamente ahí pero no es muy 
+              común hacer eso.
+        \item \textbf{meta} sirve para agregar cualquier otro tipo de información 
+              que no se pueda representar con las tags anteriores.
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Estructura principal pero menos principal}
+
+    HTML viene con los elementos \textbf{header}, \textbf{main} y \textbf{footer} para 
+    organizar el sitio en esas tres partes. También incluye cosas como \textbf{aside} 
+    para cosas que justamente deberían ir a un costado, \textbf{article} para artículos, 
+    etc. (todas bastante auto explicativas).
+    
+    Sin embargo, suele pasar (y es discutible si es algo bueno o malo) que el único 
+    elemento que se termina usando para organizar el sitio es \textbf{div}. El elemento 
+    justamente es un contenedor genérico que no representa nada por si mismo.
+
+    Todos estos elementos tienen formato ``block'', que, ahora mismo y sin entrar 
+    en detalles, significa que ocupan el ancho entero del sitio. También implica otras 
+    cosas pero todo eso va a importar más cuando nos pongamos con los estilos.
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Texto}
+
+    Los elementos \textbf{h$N$}, donde la $N$ va de 1 a 6, son encabezados. La importancia 
+    va de menor a mayor, donde \textbf{h1} es el título principal del documento (y debería 
+    haber solo uno) y \textbf{h6} es un título bastante menor.
+
+    El elemento \textbf{p} representa un párrafo, aunque se puede meter todo el texto que 
+    quieran ahí adentro.
+
+    Esos son los principales elementos que contienen texto y ambos tienen formato block.
+    Pero también hay elementos que modifican el texto que está adentro de los \textbf{p} 
+    y \textbf{h}.
+
+    \textbf{a} es para agregar links, \textbf{strong} es para marcar importancia, 
+    \textbf{em} es para énfasis, etc. Al igual que \textbf{div}, la versión genérica 
+    de los modificadores es \textbf{span}. Todos estos elementos tienen formato 
+    ``inline'', lo cual por ahora solo implica que van en el medio del contenido.
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Listas y tablas}
+
+    También tenemos listas y tablas.
+
+    \begin{itemize}
+        \item \textbf{ul} es para listas no ordenadas (el punteado no tiene números) y 
+              \textbf{ol} es para listas ordenadas (el punteado si tiene números (o letras
+              (o lo que quieran (se puede cambiar todo)))). Los elementos que van adentro 
+              de estas listas deberían ser \textbf{li}.
+        \item \textbf{table} es para tablas. Hay un montón de elementos relacionados a las 
+              tablas para organizarlas como quieran, pero los más importantes son 
+              \textbf{tr} para filas, \textbf{th} para cabezales de columnas y \textbf{td}
+              para celdas..
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Imágenes y formularios}
+
+    Para terminar con los elementos más comunes tenemos imágenes y formularios.
+
+    \begin{itemize}
+        \item Para usar imágenes está \textbf{img}. La propiedad \emph{src} define la dirección
+              de la imagen a mostrar. Tiene unas cuantas propiedades más para cambiar como 
+              aparece y tocar temas de accesibilidad.
+        \item Los formularios son con \textbf{form} y los campos de dichos formularios 
+              son con \textbf{input}. La propiedad \emph{type} define que tipo de 
+              campo es.
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Ejercicio - Perfil}
+
+    En este taller cada los ejercicios están divididos en distintos archivos .html 
+    y .css. En la carpeta ``ejercicios'' están los archivos a completar y en 
+    ``resueltos'' los archivos completos. La idea es que solo miren los resueltos 
+    al final para comparar con lo que hicieron o que a lo sumo los abran (en el 
+    navegador, no un editor de texto) para ver cómo podrían hacer que se vea el 
+    resultado. En los archivos a completar se pueden ver las consignas comentadas.
+
+    Este primer ejercicio es solo de html y se puede resolver usando las tags que 
+    vimos hasta ahora. La idea es que nos cuenten un poco sobre ustedes y 
+    sobre la relacion que tienen con la carrera. 
+
+\end{frame}

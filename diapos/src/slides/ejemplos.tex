@@ -1,0 +1,378 @@
+\section{Ejemplos}\label{sec:ejemplos}
+
+\begin{frame}[fragile]{Comenzando}
+    \framesubtitle{¿Cómo funciona?}
+    \begin{itemize}
+        \item Se escribe tu documento en \texttt{texto plano} con comandos que describen su estructura y significado.
+        \item El programa de \texttt{latex} procesa tu texto y comandos y produce un documento formateado.
+    \end{itemize}
+    \vskip 2ex
+    \begin{center}
+    \begin{minted}{latex}
+    El universo (que otros llaman la \emph{Biblioteca}) \\
+    se compone de un número \textbf{indefinido}, \\
+    y tal vez infinito, de galerías \underline{hexagonales}.
+    \end{minted}
+    \vskip 2ex
+    % \usetikzlibrary {arrows.meta}
+    \begin{tikzpicture}
+    \draw (0,0)  -- (0,-1);
+    \end{tikzpicture}
+    \vskip 2ex
+    \begin{tcolorbox}[minipage,colback=white,arc=0pt,outer arc=0pt]
+        \centering
+        El universo (que otros llaman la \emph{Biblioteca}) \\
+        se compone de un número \textbf{indefinido}, \\
+        y tal vez infinito, de galerías \underline{hexagonales}.
+    \end{tcolorbox}
+
+    \end{center}
+    
+\end{frame}
+
+\begin{frame}[fragile]{Comenzando}
+    \framesubtitle{Otros ejemplos}
+
+    \begin{exampletwoup}
+    \begin{itemize}
+    \item Mate
+    \item Café
+    \item Harina
+    \item Palmitos
+    \end{itemize}
+    \end{exampletwoup}
+    \vskip 2ex
+    \begin{exampletwoup}
+    \begin{equation}
+    \alpha + \beta + 1
+    \end{equation}
+    \end{exampletwoup}
+\end{frame}
+
+\begin{frame}[fragile]{Comenzando}
+    \framesubtitle{Cambiando la actitud}
+    \begin{itemize}
+        \item Usar \LaTeX\ nos provee una separación entre el \textbf{contenido} del documento y el \textbf{estilo}. Se usan comandos para describir el 'qué', en vez de 'como se ve' (nos enfocamos en el contenido y \LaTeX{}  se encarga del resto).
+        \item Como contraejemplo, un editor de texto plano, o un programa Word pertenecen a una forma de mostrar información llamada \say{What You See Is Whay You Get} (WYSIWYG).
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Comenzando}
+    \framesubtitle{Cambiando la actitud}
+    \begin{itemize}
+        \item Una vez escrito el contenido del documento, el estilo se puede cambiar con facilidad. No hay necesidad de reformatear las cosas a mano.
+        \item Se puede también escribir un archivo de estilo propio (o descargarlo de internet), y aplicarlo a los documentos que quisiéramos.
+        
+    \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Comenzando}
+\framesubtitle{Hola mundo!}
+
+Como es habitual con muchos lenguajes, veamos cómo hacer nuestro "Hola mundo!":
+
+\begin{multicols}{2}
+\begin{lstlisting}[title={hola\_mundo.tex}]
+\documentclass{article}
+
+\begin{document}
+
+Hola mundo! %esto es un comentario
+
+\end{document}
+\end{lstlisting}
+
+\begin{figure}
+hola\_mundo.pdf
+\includegraphics[width=0.35\textwidth]{../images/ejemplo_hola_mundo.png}
+\end{figure}
+
+\end{multicols}
+\pause
+Tal vez parece mucho texto de \LaTeX\ para que el resultado sea sólo una línea. Pero veamos cual es el rol de cada parte del documento.
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Comenzando}
+\framesubtitle{Hola mundo!}
+
+\begin{multicols}{2}
+\begin{lstlisting}[title={hola\_mundo.tex}]
+\documentclass{article}
+
+\begin{document}
+
+Hola mundo! %esto es un comentario
+
+\end{document}
+\end{lstlisting}
+\vspace*{\fill}
+\columnbreak
+
+\begin{itemize}
+    \item Los comandos comienzan con un \textbackslash.
+    \item Todo documento comienza con un \textit{documentclass}. Define la estructura general del documento. Esto incluye la fuente, el tamaño de la letra, el tamaño del papel, entre otros.    
+    \item El símbolo de porciento empieza un \emph{comentario} -- \LaTeX{} va a ignorar el resto de la línea. \% y \textbackslash\ son caracteres especiales.
+\end{itemize}
+
+\end{multicols}
+\end{frame}
+
+\begin{frame}[fragile]{Formateando texto}
+    \small
+    \begin{itemize}
+    \item Todo el cuerpo del documento va dentro del \textbackslash begin\{document\} y \textbackslash end\{document\}.
+    \item Casi siempre se puede escribir texto normalmente.
+    \begin{exampletwouptiny}
+    Las palabras se separan 
+    por uno o más espacios.
+
+    Los párrafos por una o 
+    mas líneas en blanco.
+    \end{exampletwouptiny}
+    \item Los espacios de más se colapsan en el resultado final.
+    \begin{exampletwouptiny}
+
+    El     universo    se compone 
+    de un           número(\ldots)
+        
+    \end{exampletwouptiny}
+    \item Hay algunos caracteres con significados especiales en \LaTeX{}. Si los escribís, te va a dar un error. Tenés que escaparlos con un \textbackslash.
+    \begin{exampletwoup}
+        \$\%\&\#!
+        \end{exampletwoup}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Ejercicio}
+
+    Escribamos en \LaTeX{}  este mismo texto.
+
+    \begin{tcolorbox}[colframe=color1]
+        \begin{center}
+            ¡Llegaron los resultados de la carrera!
+            \begin{enumerate}
+            \item En primer lugar, y recibiendo un premio de \$0 llega Alice.
+            \item En segundo lugar, a nada de ser ganar el lugar \#1, llega Bob.
+            \item Por último, pero incrementando su participación en carreras desde la última temporada en un 120\%, llega Charlie.
+            \item $\ldots$
+            \end{enumerate}
+        \end{center}
+    \end{tcolorbox}
+    
+    \    
+    
+    \begin{center}
+    \fbox{\href{\wlnewdoc{template.tex}}{%
+    Hacer click para abrir un template en Overleaf}}
+    \end{center}
+    
+\end{frame}
+
+\begin{frame}[fragile]{Matemáticas}
+    \framesubtitle{Símbolo \$}
+    \begin{itemize}
+        \item Veamos por qué el \$ es un caracter especial.
+        \small
+        \begin{exampletwouptiny}
+% :(            
+Sean a y b enteros positivos. 
+Sea c = a - b + 1.
+
+% :)
+Sean $a$ y $b$ enteros positivos. 
+Sea $c = a - b + 1$.
+        \end{exampletwouptiny}
+        \item Se usan siempre de a pares - uno para comenzar el modo matemático y otro para salir.
+        \item \LaTeX{} maneja los espacios automáticamente.
+            \begin{exampletwouptiny}
+Sea $y=mx+b$ \ldots
+
+Sea $y = m x + b$ \ldots
+        \end{exampletwouptiny}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Matemáticas}
+    \framesubtitle{Ecuaciones}
+    \begin{itemize}
+        \item Si tu ecuación es muy importante, podés mostrarla dentro del entorno \emph{equation}.
+
+\vspace*{5pt}
+        
+\begin{exampletwouptiny}
+Las raices de una ecuación cuadrática son
+\begin{equation}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}
+            {2a}
+\end{equation}
+donde $a$, $b$ y $c$ son \ldots
+\end{exampletwouptiny}
+
+\vspace*{5pt}
+
+\item Cuidado: \LaTeX{} generamente ignora los espacios en matemática, pero no soporta inserción de líneas en blanco.
+
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Ejemplos}
+\framesubtitle{Armando un TP}
+
+¿Qué podríamos querer hacer?
+
+\begin{lstlisting}[title={segundoTP.tex}]
+\documentclass{article}
+\title{Tremendo TP}
+\author{Nuestro grupo}
+\date{23:55 (nos sobraron 5)}
+
+\begin{document}
+\maketitle
+
+En este trabajo práctico nos proponemos resolver ...
+
+\end{document}
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Ejemplos}
+\framesubtitle{Armando un TP}
+
+\begin{figure}
+segundoTP.pdf
+\includegraphics[width=0.9\textwidth]{../images/ejemplo_tp_1.png}
+\end{figure}
+
+A su vez, se puede incluir un subtítulo, omitir algunos de los campos, o también usar funciones como \texttt{\textbackslash today} para que la fecha se actualice automáticamente con cada compilación.
+
+\end{frame}
+
+\begin{frame}[containsverbatim]
+\frametitle{Ejemplos}
+\framesubtitle{Presentaciones}
+
+¿Y si queremos armar slides para una presentación?
+
+\begin{lstlisting}
+\documentclass{beamer}
+\begin{document}
+
+\begin{frame}[containsverbatim]
+\frametitle{Ejemplos}
+\framesubtitle{Presentaciones}
+
+¿Y si queremos armar slides para una presentación?
+
+...
+
+\end{frame}
+
+\end{document}
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Ejemplos}
+\framesubtitle{Paquetes}
+
+En muchas ocasiones, vamos a querer funcionalidades, entornos, estilos, fuentes, etc. que para utilizarse requieren que usemos el \textbf{paquete} adecuado para ello.
+
+\
+
+Por ejemplo, nos gustaría poder incluir hypervínculos en nuestro documento, de forma que en el contenido del mismo utilice enlaces para acceder a otros documentos o sitios web.
+\end{frame}
+
+\begin{frame}
+\frametitle{Ejemplos}
+\framesubtitle{Paquetes}
+
+Por defecto, tenemos la posibilidad de indicar que algo es una URL. 
+
+Por ejemplo:
+
+\
+
+\begin{center}
+\textit{(...)} para más información, consultar la web del departamento de compuntación \url{https://www.dc.uba.ar}.
+\end{center}
+
+\pause
+
+Mientras que utilizando el paquete \href{https://ctan.org/pkg/hyperref}{hyperref} podemos escribir lo siguiente
+
+
+\begin{center}
+\textit{(...)} para más información, consultar la web del \href{https://www.dc.uba.ar}{departamento de computación}.
+\end{center}
+
+Lo cual resulta más prolijo para enlazar URLs, secciones de un informe, referencias, etc.
+
+\end{frame}
+
+\begin{frame}[fragile]{Código}
+Un escenario común, es el querer incluir código en nuestro documento con el \textcolor{codeorange}{entorno} \emph{lstlisting} y el \textcolor{codeorange}{paquete} \emph{listings}. Por ejemplo:
+
+\
+
+\textbackslash begin\{lstlisting\}[language=c] \\
+int sumar(int x, int y) \{ \\
+\hspace*{15pt} return x + y; \\
+\} \\
+\textbackslash end\{lstlisting\}
+
+\
+
+\begin{lstlisting}[language=c]
+int sumar(int x, int y) {
+    return x + y;
+}
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{Ejercicio}
+    Escribamos en \LaTeX{}  este mismo texto. 
+    
+    \begin{tcolorbox}[colframe=color1]
+        (\ldots) teniendo en cuenta esto, podemos definir el \textbf{teorema de Bayes} como:
+        \[P(A|B) = \frac{P(B|A)P(A)}{P(B)}\]
+        para utilizar esto, queremos primero implementar la función \texttt{probaCondicional} de la siguiente manera
+\begin{lstlisting}[language=python]
+def probaCondicional(A, B):
+    numerador   = proba(interseccion(A, B))
+    denominador = proba(B)       
+    return division(numerador, denominador)
+\end{lstlisting}
+\end{tcolorbox}
+    
+\end{frame}
+
+\begin{frame}[fragile]{Ejercicio}
+A su vez, quizás queremos incluir gráficos en algún informe o presentación. Esto lo podemos hacer con el \textcolor{codeorange}{entorno} \texttt{figure} y el \textcolor{codeorange}{comando} \textbackslash includegraphics. De esta forma:
+
+\begin{multicols}{2}
+\begin{lstlisting}
+\begin{figure}[h]
+    \centering
+    \includegraphics{../images/lion.png}
+    \caption{Titulo.}
+\end{figure}
+\end{lstlisting}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textheight]{../images/lion.png}
+    \caption{Titulo.}
+\end{figure}
+\end{multicols}
+\end{frame}

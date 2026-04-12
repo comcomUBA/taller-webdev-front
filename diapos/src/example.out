@@ -1,0 +1,6 @@
+Las raices de una ecuación cuadrática son
+\begin{equation}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}
+            {2a}
+\end{equation}
+donde $a$, $b$ y $c$ son \ldots

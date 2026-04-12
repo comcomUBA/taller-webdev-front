@@ -1,0 +1,155 @@
+
+% ******** Meta ******** %
+
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+% ******** Color ******** %
+
+\usepackage{xcolor}
+
+\usetheme{Madrid}
+
+\definecolor{colorlink}{RGB}{255,50,0}
+\definecolor{color1}{HTML}{E4DCAB}
+\definecolor{color2}{HTML}{8DC795}
+
+\setbeamercolor*{palette primary}{bg=color2}
+\setbeamercolor*{palette secondary}{bg=color1}
+\setbeamercolor*{palette tertiary}{bg = color2}
+\setbeamercolor{block title}{bg=color1,fg=black}
+
+% ******** Envs ******** %
+\usepackage{minted}
+
+\usepackage{tikz}
+
+\usepackage{tcolorbox}
+
+\usepackage{multicol}
+
+\usepackage{algpseudocode}
+
+\usepackage{hyperref}
+
+\hypersetup{colorlinks = true, linkcolor=colorlink}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=\textcolor{color2}{\tiny $\blacksquare$}}
+
+\usepackage{accsupp}
+\newcommand{\noncopynumber}[1]{%
+    \BeginAccSupp{method=escape,ActualText={}}%
+    #1%
+    \EndAccSupp{}%
+}
+
+\usepackage{listings}
+
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codeorange}{HTML}{E66100}
+\usepackage{listings}
+\lstdefinestyle{mystyle}{
+    commentstyle=\color{codegray},
+    keywordstyle=\color{codeorange},
+    numberstyle=\tiny\color{codegray}\noncopynumber,
+    stringstyle=\color{codeorange},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=4pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+	frame=leftline,
+	framexleftmargin=5mm,
+	frame=shadowbox,
+	rulesepcolor=\color{codeorange},
+	captionpos=t,
+	xleftmargin=.05\textwidth,
+	xrightmargin=.02\textwidth,
+	basicstyle=\small
+}
+
+\lstset{style=mystyle}
+
+\lstset{
+    language={[LaTeX]TeX},
+    literate=
+    {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+    {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+    {ñ}{{\~n}}1 {¿}{{\textquestiondown}}1 {?}{{?}}1 
+}
+
+\usepackage{dirtytalk}
+
+\usepackage[labelfont={color=codeorange}]{caption}
+\renewcommand{\figurename}{\textcolor{codeorange}{Figura}}
+
+\newcommand{\fileuri}{https://raw.github.com/comcomUBA/taller-latex/main/src/template}
+
+\newcommand{\wlserver}{https://www.overleaf.com}
+\newcommand{\wlnewdoc}[1]{\wlserver/docs?snip\_uri=\fileuri/#1\&splash=none}
+
+
+% ******** newcommands ********* %
+\newcommand{\cmd}[1]{{\color[HTML]{008000}\bftt{#1}}}
+
+\newenvironment{exampletwouptiny}
+  {\VerbatimEnvironment
+   \begin{VerbatimOut}{example.out}}
+  {\end{VerbatimOut}
+   \setlength{\parindent}{0pt}
+   \fbox{\begin{tabular}{l|l}
+   \begin{minipage}{0.55\linewidth}
+     \inputminted[fontsize=\scriptsize,resetmargins]{latex}{example.out}
+   \end{minipage} &
+   \begin{minipage}{0.35\linewidth}
+     \setlength{\parskip}{6pt plus 1pt minus 1pt}%
+     \raggedright\scriptsize\input{example.out}
+   \end{minipage}
+   \end{tabular}}}
+
+\newenvironment{exampletwoup}
+  {\VerbatimEnvironment
+   \begin{VerbatimOut}{example.out}}
+  {\end{VerbatimOut}
+   \setlength{\parindent}{0pt}
+   \fbox{\begin{tabular}{l|l}
+   \begin{minipage}{0.55\linewidth}
+     \inputminted[fontsize=\small,resetmargins]{latex}{example.out}
+   \end{minipage} &
+   \begin{minipage}{0.35\linewidth}
+     \input{example.out}
+   \end{minipage}
+   \end{tabular}}}
+
+% ******** Math ******** %
+
+% Paquetes que se necesiten para los ejemplos de fórmulas
+
+% ******** Algorithms ******** %
+
+% Paquetes que se necesiten para los ejemplos de algorítmos
+
+% ******** Doc Format ******** %
+
+% Configuraciones de formato, table de contenidos, etc
+
+\title[Taller de desarrollo web]%
+{Taller de desarrollo web}
+
+\author[ComCom]%
+{ComCom}
+
+\institute[DC - FCEyN - UBA]%
+{\inst{}Departamento de Computación\\
+FCEyN UBA}
+
+\date[1c2026]%
+{Primer Cuatrimestre 2026}
