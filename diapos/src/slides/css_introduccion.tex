@@ -1,0 +1,209 @@
+\section{CSS_Intro}\label{sec:CSS_Intro}
+
+\begin{frame}
+    \frametitle{Estilo, CSS}
+    
+    Si entraron a cualquier sitio web de los últimos 20 años, seguramente hayan notado 
+    que se ven bastante más complejos que lo que hicimos hasta ahora con HTML.
+
+    Entra CSS, Cascading Style Sheets. El lenguaje existe para cambiar la 
+    forma en la que se ven los documentos HTML. Hasta ahora dependíamos de 
+    cómo los distintos elementos fueran renderizados por el navegador, pero 
+    ahora podemos cambiar eso completamente.
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Quién necesita JS?}
+
+    Como dato curioso, HTML y CSS juntos son turing complete. Eso significa que, 
+    técnicamente, se pueden usar para hacer cualquier cosa que los otros lenguajes 
+    de programación puedan hacer, incluyendo JavaScript. Esto no significa que 
+    eso sea una buena idea. Estos lenguajes no fueron pensados para eso y tratar 
+    de usarlos de esa forma sería increíblemente incómodo y no valdría la pena.
+
+    De todas formas, cuando alguien les diga que HTML y CSS no son lenguajes de 
+    programación, pueden responder con este dato.
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Sintaxis de CSS}
+    
+    CSS funciona con \emph{reglas}. Un archivo .css (o una tag \inlinecode{style} 
+    en un archivo .html) contiene tantas reglas como uno quiera, una atrás de 
+    otra, definiendo a qué partes del documento se le deberían aplicar qué 
+    propiedades. Estas reglas siguen el siguiente formato:
+
+    \begin{lstlisting}
+selector {
+    propiedad1: valor1;
+    propiedad2: valor2;
+    ...
+}
+    \end{lstlisting}
+
+    El selector indica qué elementos van a ser afectados por la regla. Las 
+    propiedades indican cómo van a ser afectados.
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Selectores, clases e ids}
+    
+    Los selectores más básicos son selectores de tipo, de clase y de id. 
+
+    Un selector de tipo dice que la regla va a aplicar a todos los elementos 
+    del tipo indicado. Por ejemplo, si el selector es \inlinecode{p}, todos los 
+    elementos \inlinecode{p} van a tener la regla.
+
+    Los selectores de clase y de id funcionan igual, pero hay que marcarlos 
+    con un punto y con un numeral respectivamente. Por ejemplo, si el 
+    selector es \inlinecode{.contenedor}, todos los elementos con la clase 
+    ``contenedor'' van a tener esa regla. Lo mismo con \inlinecode{#titulo-principal} 
+    y el elemento con id ``titulo-principal''.
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Clases e ids?}
+    
+    Pero, qué son las clases y los ids?
+
+    Todo elemento de HTML puede tener los atributos \inlinecode{class} e 
+    \inlinecode{id}. El primero es una lista de nombres separados con espacios. 
+    El segundo es un solo nombre.
+
+    La idea de las clases es que sean indicadores de características compartidas 
+    por múltiples elementos a lo largo del documento. También, un elemento puede 
+    (y suele) tener múltiples clases. La diferencia con los ids es que el id debe 
+    ser único. 
+
+    El motivo por el que estos atributos existen es para poder identificar ciertos 
+    elementos o conjuntos de elementos del sitio. Como ya vimos, en CSS esto nos 
+    deja aplicar reglas de forma mucho más específica. En el caso de JS, nos 
+    permitiría encontrar e interactuar elementos de la misma forma.
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Ejemplo de HTML y CSS usando clases e ids}
+    
+\begin{lstlisting}
+<div class="contenedor" id="contenedor-principal">
+    <h1 id="titulo-principal">Buenas tardes<h1>
+</div>
+<div class="contenedor azul">...</div>
+\end{lstlisting}
+
+\begin{lstlisting}
+.contenedor {
+    display: flex;
+}
+#contenedor-principal {
+    background-color: orange;
+}
+#titulo-principal {
+    color: red;
+}
+.azul {
+    background-color: blue;
+}
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Más selectores}
+    
+    Pero esos tres no son los únicos tipos de selectores. Se pueden combinar 
+    entre sí de distintas formas para armar selectores mucho más complejos 
+    que nos permiten ser mucho más específicos sobre a qué partes del sitio 
+    se les debería aplicar qué reglas.
+
+    Algunos ejemplos son:
+    
+    \begin{itemize}
+        \item \inlinecode{A, B} para indicar que la regla debe aplicar a 
+              \inlinecode{A} y a \inlinecode{B}.
+        \item \inlinecode{A B} para indicar que la regla debe aplicar a los 
+              \inlinecode{B} que sean descendientes de \inlinecode{A}.
+        \item \inlinecode{A:PC} para indicar que la regla debe 
+              aplicar a \inlinecode{A} cuando tiene la pseudoclase \inlinecode{PS}.
+    \end{itemize}
+
+    Entre otros.
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Valores para las propiedades}
+    
+    Ya hablamos de los selectores. De las propiedades no hay mucho que decir, 
+    hay un montón, cada una tiene un nombre único y ciertos valores que puede 
+    tomar. Pero esos valores no son ni un poquito sencillos.
+
+    Por ahora vamos a concentrarnos en dos tipos de valores posibles:
+
+    \begin{itemize}
+        \item \emph{keyword}: Son valores con nombres específicos y hacen 
+              cosas específicas dependiendo de para qué propiedad están siendo usados.
+        \item Magnitudes: Son valores de la forma $Nu$, donde $u$ es la unidad y 
+              $N$ es la cantidad de dicha unidad. Estas unidades pueden ser 
+              absolutas o relativas. Las absolutas son siempre lo mismo, sin importar 
+              en donde aparezcan$^*$. Las relativas representan distintas magnitudes 
+              dependiendo del contexto, ya sea dado por el elemento al que se está 
+              aplicando la regla o por el propio navegador en el que está viéndose 
+              el sitio.
+    \end{itemize}
+
+    Más adelante vamos a profundizar un poco sobre las unidades, pero por ahora 
+    algunas útiles e interesantes son \inlinecode{px}, \inlinecode{cm}, \inlinecode{\%} 
+    y \inlinecode{em}.
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Algunas propiedades básicas}
+    
+    Algunas propiedades básicas para que empecemos a tocar un poco el estilo 
+    de nuestros sitios son:
+
+    \begin{itemize}
+        \item \inlinecode{color} para cambiar el color del texto. El color puede 
+              escribirse por nombre, por código hexadecimal, o con una variable.
+        \item \inlinecode{background-color} para cambiar el color del fondo. Recibe 
+              lo mismo que \inlinecode{color}.
+        \item \inlinecode{border} para ponerle un borde al elemento. Recibe un grosor, 
+              un estilo y un color.
+        \item \inlinecode{font-size} para cambiar el tamaño del texto. Recibe una 
+              magnitud.
+        \item \inlinecode{font-family} para cambiar la fuente del texto. Recibe el 
+              nombre de la fuente (o familia de fuentes).
+        \item \inlinecode{background-image} para poner una imagen de fondo. Recibe 
+              una dirección a la imagen o algunos otros valores medio raros.
+        \item \inlinecode{text-decoration} para agregarle algunos detalles al texto, 
+              como por ejemplo subrayado. Recibe valores concretos como \inlinecode{underline}.
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Ejercicio - Historia}
+    
+    En este ejercicio tienen que retocar y arreglar el estilo del documento 
+    sobre la historia de nuestra carrera. Pueden usar las propiedades que vimos 
+    en la diapositiva anterior y también pueden buscar otras propiedades que 
+    les interesen en internet.
+
+    Este es un buen momento para mencionar 
+    \href{https://developer.mozilla.org/}{developer.mozilla.org}, lugar en el que 
+    está documentado casi todo lo relacionado a HTML, CSS y JS. El sitio tiene 
+    buenas explicaciones, tutoriales, ejemplos y ejercicios. Está buenísimo.
+    Pueden buscar ahí lo que quieran para resolver los ejercicios del taller.
+
+    Eso si, por ahora eviten meterse con reglas que cambien el ``layout'' del sitio. 
+    Eso incluye padding, márgenes, posicionamiento, display, etc. Después de este 
+    ejercicio nos vamos a meter con esos temas.
+
+\end{frame}

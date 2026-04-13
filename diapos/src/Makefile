@@ -1,7 +1,7 @@
 
 TEX = clase
  
-$(TEX).pdf: clase.tex ./slides/*.tex
+$(TEX).pdf: clase.tex header.tex ./slides/*.tex
 	pdflatex -shell-escape $(TEX).tex
 
 .PHONY: clean

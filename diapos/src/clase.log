@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.12)  11 APR 2026 22:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.12)  13 APR 2026 16:03
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -742,6 +742,9 @@ LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1)
 on input line 7.
 LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1)
  on input line 7.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/courier.sty
+Package: courier 2020/03/25 PSNFSS-v9.3 (WaS) 
+)
 (/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty
 (/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty)
 
@@ -775,7 +778,10 @@ Package: fancyvrb 2025/07/28 4.6 verbatim text (tvz,hv)
 (/usr/local/texlive/2026/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
-)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+))
 (/usr/local/texlive/2026/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2026/02/16 line numbers on paragraphs v5.7
 \linenopenalty=\count364
@@ -1040,7 +1046,7 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 36.
+Package hyperref Info: Option `colorlinks' set `true' on input line 38.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip73
@@ -1093,30 +1099,6 @@ Package: listings 2025/11/14 1.11b (Carsten Heinz)
 (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
-(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2025/11/14 1.11b listings language file
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2025/11/14 1.11b listings language file
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2025/11/14 1.11b listings language file
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2025/11/14 1.11b listings language file
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2025/11/14 1.11b listings language file
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2025/11/14 1.11b listings language file
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2025/11/14 1.11b listings language file
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2025/11/14 1.11b listings language file
-)
 (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
 )
@@ -1155,12 +1137,7 @@ Package caption Info: listings package is loaded.
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count432
 )
-(./clase.aux
-LaTeX Info: Redefining \. on input line 11.
-LaTeX Info: Redefining \% on input line 11.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 11.
-)
+No file clase.aux.
 \openout1 = `clase.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -1181,7 +1158,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1239,8 +1215,6 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring ON on input line 7.
-
-(./clase.out) (./clase.out)
 \@outlinefile=\write6
 \openout6 = `clase.out'.
 
@@ -1269,9 +1243,9 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 7.
 LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 7.
+(Font)                  OT1/cmtt/m/n --> OT1/pcr/m/n on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 7.
+(Font)                  OT1/cmtt/m/n --> OT1/pcr/m/n on input line 7.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
 (Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 7.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
@@ -1285,7 +1259,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 7.
+(Font)                  OT1/pcr/m/n --> OT1/pcr/b/n on input line 7.
 LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 7.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
 (Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 7
@@ -1323,14 +1297,13 @@ Dictionary: translator-theorem-dictionary, Language: English
 )
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty
-Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
-)
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 7.
 \c@lstlisting=\count439
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
- (./clase.nav)
+
+No file clase.nav.
 (./slides/titlepage.tex
 LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
 
@@ -1349,7 +1322,7 @@ ut line 8.
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-<../images/comcom-sin-texto.png, id=35, 209.28188pt x 105.39375pt>
+<../images/comcom-sin-texto.png, id=27, 209.28188pt x 105.39375pt>
 File: ../images/comcom-sin-texto.png Graphic file (type png)
 <use ../images/comcom-sin-texto.png>
 Package pdftex.def Info: ../images/comcom-sin-texto.png  used on input line 8.
@@ -1370,9 +1343,18 @@ es/comcom-sin-texto.png>]) (./slides/introduccion.tex [2
 
 ] [7
 
-]) (./slides/html.tex [8
+]) (./slides/html.tex
+\openout4 = `clase.vrb'.
 
-]
+ (./clase.vrb
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
+2.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)) [8
+
+{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 \openout4 = `clase.vrb'.
 
  (./clase.vrb
@@ -1387,17 +1369,93 @@ LaTeX Font Warning: Font shape `OML/cmss/m/n' undefined
 
 ) [9
 
-] [10
+]
+\openout4 = `clase.vrb'.
 
-] [11
+ (./clase.vrb) [10
 
-] [12
+]
+\openout4 = `clase.vrb'.
 
-] [13
+ (./clase.vrb) [11
 
-] [14
+]
+\openout4 = `clase.vrb'.
+
+ (./clase.vrb) [12
+
+]
+\openout4 = `clase.vrb'.
+
+ (./clase.vrb)
+[13
+
+]
+\openout4 = `clase.vrb'.
+
+ (./clase.vrb) [14
 
 ] [15
+
+]) (./slides/css_introduccion.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 1.
+
+[16
+
+] [17
+
+]
+\openout4 = `clase.vrb'.
+
+ (./clase.vrb
+LaTeX Font Info:    Trying to load font information for OMS+cmss on input line 
+9.
+LaTeX Font Info:    No file OMScmss.fd. on input line 9.
+
+
+LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 9.
+
+) [18
+
+]
+\openout4 = `clase.vrb'.
+
+ (./clase.vrb) [19
+
+]
+\openout4 = `clase.vrb'.
+
+ (./clase.vrb) [20
+
+]
+\openout4 = `clase.vrb'.
+
+ (./clase.vrb) [21
+
+{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+\openout4 = `clase.vrb'.
+
+ (./clase.vrb)
+[22
+
+]
+\openout4 = `clase.vrb'.
+
+ (./clase.vrb) [23
+
+]
+\openout4 = `clase.vrb'.
+
+ (./clase.vrb) [24
+
+]
+\openout4 = `clase.vrb'.
+
+ (./clase.vrb) [25
 
 ])
 \tf@nav=\write7
@@ -1408,9 +1466,6 @@ LaTeX Font Warning: Font shape `OML/cmss/m/n' undefined
 
 \tf@snm=\write9
 \openout9 = `clase.snm'.
-
-runsystem(latexminted cleantemp  --timestamp 20260411223145 A788E21B2906DFDAC17
-A8792DCD6FAE2)...executed.
 
  (./clase.aux
 LaTeX Info: Redefining \. on input line 11.
@@ -1424,30 +1479,41 @@ L3 programming layer <2026-01-19>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `clase.out' has not changed.
-(rerunfilecheck)             Checksum: 80AC2B1591608F8C2FB0C8000ECC836E;169.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `clase.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `clase.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  5D0C1484CD31135E5C398E97BF4ED4A1;252.
  ) 
 Here is how much of TeX's memory you used:
- 37738 strings out of 467525
- 773468 string characters out of 5418982
- 1481631 words of memory out of 5000000
- 65957 multiletter control sequences out of 15000+600000
- 637125 words of font info for 73 fonts, out of 8000000 for 9000
+ 36831 strings out of 467525
+ 759950 string characters out of 5418982
+ 1525823 words of memory out of 5000000
+ 65011 multiletter control sequences out of 15000+600000
+ 638137 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 133i,15n,126p,462b,2558s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 133i,15n,126p,462b,1417s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb>
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><
 /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></u
 sr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></
 usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></
-usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></
-usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></us
-r/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on clase.pdf (15 pages, 142821 bytes).
+usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
+/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></
+usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></us
+r/local/texlive/2026/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on clase.pdf (25 pages, 183426 bytes).
 PDF statistics:
- 512 PDF objects out of 1000 (max. 8388607)
- 440 compressed objects within 5 object streams
- 35 named destinations out of 1000 (max. 500000)
- 100 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 815 PDF objects out of 1000 (max. 8388607)
+ 702 compressed objects within 8 object streams
+ 57 named destinations out of 1000 (max. 500000)
+ 84 words of extra memory for PDF output out of 10000 (max. 10000000)
 

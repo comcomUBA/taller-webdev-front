@@ -1,22 +1,17 @@
-\frametitle{Estructura principal}
+\frametitle{Ejercicio - Historia}
 
-    Las tags más importante que cualquier sitio debe tener son \textbf{html},
-    \textbf{head} y \textbf{body}. La primera es la que define los límites del documento,
-    sin esa tag no existe nada. La segunda es para definir información relevante
-    al sitio pero que no va a ser visible para el usuario, eso incluye metadatos
-    y un poco de información extra para que el navegador sepa como interpretar el
-    sitio. Por último, \textbf{body} es donde va el contenido del sitio, básicamente todo.
+    En este ejercicio tienen que retocar y arreglar el estilo del documento
+    sobre la historia de nuestra carrera. Pueden usar las propiedades que vimos
+    en la diapositiva anterior y también pueden buscar otras propiedades que
+    les interesen en internet.
 
-    Cualquier sitio normal sigue el siguiente esquema:
+    Este es un buen momento para mencionar
+    \href{https://developer.mozilla.org/}{developer.mozilla.org}, lugar en el que
+    está documentado casi todo lo relacionado a HTML, CSS y JS. El sitio tiene
+    buenas explicaciones, tutoriales, ejemplos y ejercicios. Está buenísimo.
+    Pueden buscar ahí lo que quieran para resolver los ejercicios del taller.
 
-    \begin{lstlisting}
-<html>
-    <head>
-        Metadatos, estilo, etc...
-    </head>
-    <body>
-        Contenido
-    </body>
-</html>
-    \end{lstlisting}
+    Eso si, por ahora eviten meterse con reglas que cambien el ``layout'' del sitio.
+    Eso incluye padding, márgenes, posicionamiento, display, etc. Después de este
+    ejercicio nos vamos a meter con esos temas.
 
