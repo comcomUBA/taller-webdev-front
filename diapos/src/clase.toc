@@ -1,4 +1,5 @@
 \babel@toc {spanish}{}\relax 
 \beamer@sectionintoc {1}{Introducción}{2}{0}{1}
 \beamer@sectionintoc {2}{HTML}{8}{0}{2}
-\beamer@sectionintoc {3}{CSS_Intro}{16}{0}{3}
+\beamer@sectionintoc {3}{CSS_Intro}{17}{0}{3}
+\beamer@sectionintoc {4}{CSS_Layout}{27}{0}{4}
