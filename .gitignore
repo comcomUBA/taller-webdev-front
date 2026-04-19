@@ -1,1 +1,10 @@
 .DS_Store
+
+slides/src/_minted
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
