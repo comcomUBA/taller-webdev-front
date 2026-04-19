@@ -187,7 +187,48 @@
 \begin{frame}
 \frametitle{Flexbox}
 
-    % Cosas sobre flexbox
+    Como el nombre lo indica, un contenedor flexbox trata a sus elementos hijos 
+    como cajas de espaciado (y a veces tamaño) adaptable al espacio disponible. El eje principal 
+    sobre el cual se posicionan se define con la propiedad \inlinecode{flex-direction}, que puede
+    ser \inlinecode{row}, \inlinecode{column}, o cualquiera con \inlinecode{-reverse} al final. 
+
+    Para el posicionamiento, desde el contenedor usamos \inlinecode{justify-content} para controlar 
+    posicion de elementos en el eje principal. Esto incluye el espacio entre elementos. 
+    Algunas posibilidades son:  
+    
+    \begin{itemize}
+        \item \inlinecode{start}, \inlinecode{end}, \inlinecode{center}: Elementos en la posición 
+            indicada y "pegados", separados solo por sus margenes
+        \item \inlinecode{space-between}: Aleja los elementos lo más posible, usando todo el espacio
+        \item \inlinecode{space-evenly}: Similar al anterior, dejando espacio también con los bordes
+    \end{itemize}
+    
+    \inlinecode{align-items} hace lo mismo en el eje opuesto, sin poder definir espaciado que no 
+    tendría sentido.
+
+    
+
+    
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Flexbox}
+    
+    Como alternativa a tener que esconder cosas en caso de overflow, podemos usar \inlinecode{flex-wrap}, 
+    definiendo que los elementos se posicionen en una segunda fila o columna si no entran, 
+    que permite automáticamente adaptarse a pantallas de distintos tamaños.
+
+    En este caso, align-content nos dice como alinear la segunda fila o columna. Funciona igual que
+    el \inlinecode{justify-content} en el otro eje. 
+
+    También es posible indicarles a los elementos que se estiren a ocupar cierta proporción del 
+    espacio que sobra usando \inlinecode{flex}.
+
+    Hay otras propiedades de flex que modifican otros detalles del posicionamiento, que siempre
+    pueden buscar si les interesa. 
+
+    
 
 \end{frame}
 
