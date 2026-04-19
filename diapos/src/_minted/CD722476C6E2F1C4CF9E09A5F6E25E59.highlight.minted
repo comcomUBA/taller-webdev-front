@@ -1,9 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{c}{\PYGZpc{} :(}
-Sean a y b enteros positivos.
-Sea c = a \PYGZhy{} b + 1.
-
-\PYG{c}{\PYGZpc{} :)}
-Sean \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{a}\PYG{l+s}{\PYGZdl{}} y \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{b}\PYG{l+s}{\PYGZdl{}} enteros positivos.
-Sea \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{c }\PYG{o}{=}\PYG{n+nb}{ a }\PYG{o}{\PYGZhy{}}\PYG{n+nb}{ b }\PYG{o}{+}\PYG{n+nb}{ }\PYG{l+m}{1}\PYG{l+s}{\PYGZdl{}}.
-\end{MintedVerbatim}
