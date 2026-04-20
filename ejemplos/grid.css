@@ -1,0 +1,42 @@
+
+
+#ej-1 {
+    .container {
+        height: 50dvh;
+        width: 50%;
+        background-color: #c0c0c0;
+
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr 1fr;
+        grid-template-columns: 50% 100px auto;
+        grid-template-areas: 
+            "hola hola   .     "
+            "hola hola   .     "
+            "hola hola   .     "
+            ".    tardes tardes";
+    }
+
+    .hola {
+        grid-area: hola;
+
+        background-color: red;
+        color: white;
+    }
+
+    .buenas {
+        grid-row-start: 2;
+        grid-row-end: 4;
+        grid-column: 3 / 4;
+
+        background-color: green;
+        color: white;
+    }
+
+    .tardes {
+        grid-row: 4 / span 1;
+        grid-column: 2 / span 2;
+
+        background-color: blue;
+        color: white;
+    }
+}

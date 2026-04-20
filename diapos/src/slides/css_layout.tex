@@ -180,7 +180,39 @@
 \begin{frame}
 \frametitle{Grid}
 
-    % Cosas sobre grid
+    Las grids nos permiten partir un contenedor en secciones rectangulares, definir 
+    el tamaño de dichas secciones y decidir qué elementos ocupan qué secciones.
+
+    Lo primero que hay que hacer es definir cuántas filas y columnas queremos y sus 
+    tamaños. Las propiedades \inlinecode{grid-template-rows} y \inlinecode{grid-template-columns} 
+    hacen esto para las filas y las columnas respectivamente. El formato del valor es 
+    \inlinecode{tamaño_fila_1 tamaño_fila_2 ... tamaño_fila_n} y lo mismo para las 
+    columnas.
+
+    Luego, hay tres formas de decidir donde van los elementos. La más sencilla es 
+    sin tocar nada y que se acomoden automáticamente según \inlinecode{grid-auto-flow}.
+    Otra opción es agregarle \inlinecode{grid-A-B} al elemento, donde \inlinecode{A} puede ser 
+    \inlinecode{row} o \inlinecode{column} y \inlinecode{B} puede ser \inlinecode{start} 
+    o \inlinecode{end}. Estas propiedades dicen donde empieza y donde termina el elemento en la 
+    grid. La última opción es con \inlinecode{grid-template-areas}, pero es más fácil 
+    de entender viendo un ejemplo.
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Grid}
+
+    Algunas otras cosas que podemos hacer con las grids son:
+
+    \begin{itemize}
+        \item Agregar separación entre filas y entre columnas usando \inlinecode{grid-gap}.
+        \item Acomodar los elementos adentro de las areas horizontal y verticalmente 
+              usando \inlinecode{justify-items} y \inlinecode{align-items} respectivamente.
+        \item Lo mismo que el punto anterior pero por elemento cambiando \inlinecode{items} 
+              por \inlinecode{self}.
+        \item Acomodar la grid entera cuando no ocupa el espacio del contenedor completamente
+              usando \inlinecode{justify-content} y \inlinecode{align-content}.
+    \end{itemize}
 
 \end{frame}
 

@@ -95,52 +95,6 @@
 \usepackage[labelfont={color=codeorange}]{caption}
 \renewcommand{\figurename}{\textcolor{codeorange}{Figura}}
 
-\newcommand{\fileuri}{https://raw.github.com/comcomUBA/taller-latex/main/src/template}
-
-\newcommand{\wlserver}{https://www.overleaf.com}
-\newcommand{\wlnewdoc}[1]{\wlserver/docs?snip\_uri=\fileuri/#1\&splash=none}
-
-
-% ******** newcommands ********* %
-\newcommand{\cmd}[1]{{\color[HTML]{008000}\bftt{#1}}}
-
-\newenvironment{exampletwouptiny}
-  {\VerbatimEnvironment
-   \begin{VerbatimOut}{example.out}}
-  {\end{VerbatimOut}
-   \setlength{\parindent}{0pt}
-   \fbox{\begin{tabular}{l|l}
-   \begin{minipage}{0.55\linewidth}
-     \inputminted[fontsize=\scriptsize,resetmargins]{latex}{example.out}
-   \end{minipage} &
-   \begin{minipage}{0.35\linewidth}
-     \setlength{\parskip}{6pt plus 1pt minus 1pt}%
-     \raggedright\scriptsize\input{example.out}
-   \end{minipage}
-   \end{tabular}}}
-
-\newenvironment{exampletwoup}
-  {\VerbatimEnvironment
-   \begin{VerbatimOut}{example.out}}
-  {\end{VerbatimOut}
-   \setlength{\parindent}{0pt}
-   \fbox{\begin{tabular}{l|l}
-   \begin{minipage}{0.55\linewidth}
-     \inputminted[fontsize=\small,resetmargins]{latex}{example.out}
-   \end{minipage} &
-   \begin{minipage}{0.35\linewidth}
-     \input{example.out}
-   \end{minipage}
-   \end{tabular}}}
-
-% ******** Math ******** %
-
-% Paquetes que se necesiten para los ejemplos de fórmulas
-
-% ******** Algorithms ******** %
-
-% Paquetes que se necesiten para los ejemplos de algorítmos
-
 % ******** Doc Format ******** %
 
 % Configuraciones de formato, table de contenidos, etc
