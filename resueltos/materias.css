@@ -1,0 +1,69 @@
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 10px;
+}
+
+#compu {
+    background-color: #1e5b95;
+    color: white;
+}
+
+#datos {
+    background-color: #9bd279;
+    color: white;
+}
+
+section {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 20px 30px 20px;
+
+    h2 {
+        text-align: center;
+        font-size: 2em;
+    }
+}
+
+.lista-de-materias {
+    width: 100%;
+    height: 40dvh;
+    padding: 0;
+    margin-top: 15px;
+
+    display: flex;
+    gap: 20px;
+
+    overflow: auto;
+    list-style: none;
+}
+
+.materia {
+    background-color: white;
+    color: black;
+    
+    aspect-ratio: 1 / 1.1;
+    padding: 7px;
+    border-radius: 10px;
+    
+    flex-shrink: 0;
+    overflow: auto;
+}
+
+footer {
+    padding: 10px;
+    background-color: black;
+    color: white;
+
+    a, a:visited {
+        color: white;
+    }
+}
