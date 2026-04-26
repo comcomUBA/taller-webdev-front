@@ -1,0 +1,54 @@
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    background-color: darkcyan;
+    color: white;
+
+    text-align: right; /* Centrar el texto del header */
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.subtitulo {
+    font-style: italic;
+}
+
+header .subtitulo {
+    font-size: 1.5em;
+}
+
+/* Cambiar el tamano de los titulos de las secciones */
+
+section {
+    .subtitulo {
+        font-size: 1.2em;
+    }
+}
+
+#seccion-prehistoria {
+    background-color: #e5efe5;
+}
+
+/* Cambiar el color del fondo de las otras dos secciones */
+
+/* Agregar el estilo que quieran a la primer mencion del DC y a las menciones 
+de computación y de datos */
+
+/* Hacer visible el texto del footer */
+footer {
+    background-color: navy;
+    color: navy;
+
+    border: 2px dotted lightblue;
+
+    a, a:visited {
+        color: navy
+    }
+}
+
+/* Aparte de las consignas de arriba, pueden tocar lo que quieran. Hagan algo que les guste! */

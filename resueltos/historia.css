@@ -1,0 +1,71 @@
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    background-color: darkcyan;
+    color: white;
+
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.subtitulo {
+    font-style: italic;
+}
+
+header .subtitulo {
+    font-size: 1.5em;
+}
+
+section {
+    h2 {
+        font-size: 2em;
+    }
+    .subtitulo {
+        font-size: 1.2em;
+    }
+}
+
+#seccion-prehistoria {
+    background-color: #e5efe5;
+}
+
+#seccion-creacion {
+    background-color: #e5e5ef;
+}
+
+#seccion-actualidad {
+    background-color: #efe5e5;
+}
+
+#primer-mencion-dc {
+    font-size: 2em;
+    font-weight: bolder;
+    color: dodgerblue;
+
+    border: 5px double orangered;
+}
+
+.mencion-computacion {
+    color: deeppink;
+}
+
+.mencion-datos {
+    color: darkviolet
+}
+
+footer {
+    background-color: navy;
+    color: white;
+
+    border: 2px dotted lightblue;
+
+    a, a:visited {
+        color: white
+    }
+}
