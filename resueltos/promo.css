@@ -1,0 +1,64 @@
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: rgb(28, 28, 30);
+    color: white;
+
+    font-family: sans-serif;
+}
+
+#contenedor-promo {
+    display: grid;
+    grid-template-rows: repeat(1fr, 3);
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+        "descripcion logo      "
+        "descripcion requisitos"
+        "footer      requisitos";
+    
+    gap: 5px;
+    background-color: #008b94;
+    border: 5px solid #008b94;
+    border-radius: 20px;
+
+    box-sizing: border-box;
+    width: 70%;
+    height: 70dvh;
+    margin: 15dvh auto;
+    
+    div {
+        background-color: rgb(28, 28, 30);
+        
+        box-sizing: border-box;
+        padding: 10px;
+        border-radius: 20px;
+    }
+}
+
+#contenedor-descripcion {
+    grid-area: descripcion;
+}
+
+#contenedor-logo-comcom {
+    grid-area: logo;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+#contenedor-requisitos {
+    grid-area: requisitos;
+}
+
+#contenedor-footer {
+    grid-area: footer;
+}

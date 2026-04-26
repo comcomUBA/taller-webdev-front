@@ -1,0 +1,54 @@
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: rgb(28, 28, 30);
+    color: white;
+
+    font-family: sans-serif;
+}
+
+/* Ponerle nombres adecuados a las areas y darles tamaños adecuados. */
+/* También pueden cambiar la cantidad de áreas y su distribución si quieren. */
+#contenedor-promo {
+    display: grid;
+    grid-template-areas: 
+        ". ."
+        ". ."
+        ". .";
+    
+    gap: 5px;
+    background-color: #008b94;
+    border: 5px solid #008b94;
+    border-radius: 20px;
+
+    box-sizing: border-box;
+    width: 70%;
+    height: 70dvh;
+    margin: 15dvh auto;
+    
+    div {
+        background-color: rgb(28, 28, 30);
+        
+        box-sizing: border-box;
+        padding: 10px;
+        border-radius: 20px;
+    }
+}
+
+/* Acomodar los distintos contenedores en sus celdas correspondientes */
+
+#contenedor-logo-comcom {
+
+    width: 100%;
+    
+    /* Acomodar la imagen para que esté bien contenida y centrada */
+    /* Tip: flex */
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
