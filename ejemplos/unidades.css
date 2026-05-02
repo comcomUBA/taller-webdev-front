@@ -1,0 +1,45 @@
+section {
+    margin: 30px;
+}
+
+.un-rem {
+    font-size: 1rem;
+}
+
+.dos-rem {
+    font-size: 2rem;
+}
+
+.un-em {
+    font-size: 1em;
+}
+
+.dos-em {
+    font-size: 2em;
+}
+
+.caja {
+    padding: 10px;
+    border: 3px solid black;
+}
+
+#ejemplo-porcentaje {
+    > div {
+        width: 50%;
+        height: 400px;
+        font-size: 2rem;
+
+        > div {
+            width: 40%;
+            height: 40%;
+            font-size: 50%;
+        }
+    }
+}
+
+#ejemplo-vmax {
+    div {
+        width: 50vmax;
+        height: 200px;
+    }
+}

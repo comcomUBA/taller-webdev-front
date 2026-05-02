@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades</title>
+    <link rel="stylesheet" href="unidades.css">
+</head>
+<body>
+    <section>
+        <div class="caja">
+            <p>Esta caja tiene tamaño de fuente por defecto</p>
+            <p>
+                <span class="un-rem">1 rem</span>
+                <span class="dos-rem">2 rem</span>
+                <span class="un-em">1 em</span>
+                <span class="dos-em">2 em</span>
+            </p>
+            <div class="dos-rem caja">
+                <p class="un-rem">
+                    Esta caja tiene tamaño de fuente 2rem, lo cual es el 
+                    doble del tamaño por defecto.
+                </p>
+                <p>
+                    <span class="un-rem">1 rem</span>
+                    <span class="dos-rem">2 rem</span>
+                    <span class="un-em">1 em</span>
+                    <span class="dos-em">2 em</span>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="ejemplo-porcentaje">
+        <div class="caja">
+            <div class="caja">
+                <p>
+                    Ancho: 40% <br>
+                    Alto: 40% <br>
+                    Fuente: 50% <br>
+                </p>
+            </div>
+            <p>
+                Ancho: 50% <br>
+                Alto: 400px <br>
+                Fuente: 2rem <br>
+            </p>
+        </div>
+    </section>
+    <section id="ejemplo-vmax">
+        <div class="caja">
+            <p>Ancho: 50vmax</p>
+        </div>
+    </section>
+</body>
+</html>
