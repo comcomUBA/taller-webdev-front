@@ -65,6 +65,8 @@ footer {
 
     border: 2px dotted lightblue;
 
+    user-select: none;
+
     a, a:visited {
         color: white
     }
