@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de WebDev</title>
+
+    <link rel="stylesheet" href="https://lalten.github.io/lmweb/style/latinmodern-sans.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="diapos.css">
+    <link rel="stylesheet" href="html.css">
+</head>
+<body>
+    <header>
+        <p>
+            <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" 
+                alt="Logo de HTML 5"
+            >
+        </p>
+    </header>
+    <main>
+        <section>
+            <h2>Hypertext Markup Language (HTML)</h2>
+            <section>
+                <p>
+                    HTML es un lenguaje para armar documentos. "Hypertext" 
+                    se refiere a los links que conectan los distintos sitios 
+                    y documentos. "Markup" se refiere a que se usa una sintaxis 
+                    particular para marcar cómo se debería estructurar el 
+                    contenido.
+                    <br>
+                    La sintaxis de HTML consiste en el uso de <em>tags</em>. Hay 
+                    alrededor de 140 de estas tags, pero lo normal es usar un 
+                    subconjunto bastante más chico de ellas. 
+                    <br>
+                    Las tags tienen el formato 
+                    <span class="mono">&lttag atributos>Contenido&lt/tag></span>
+                    o
+                    <span class="mono">&lttag atributos/></span>
+                    para elementos sin contenido. Dicho contenido podría ser 
+                    texto o incluso otras tags. Veamos cuáles son las tags más 
+                    importantes.
+                </p>
+            </section>
+            <hr>
+            <section>
+                <p class="mono">&ltsection></p>
+                <p class="mono tabbed">&lth3></p>
+                <h3>Esto es un título</h3>
+                <p class="mono tabbed">&lt/h3></p>
+                <p class="mono tabbed">&ltp></p>
+                <p>
+                    Esto es un párrafo. Acá puede ir todo el texto del mundo 
+                    y otras cosas. Tanto este p como el h3 son descendientes 
+                    de la section.
+                </p>
+                <p class="mono tabbed">&lt/p></p>
+                <p class="mono">&lt/section></p>
+            </section>
+        </section>
+        <section>
+            <h2>Estructura principal</h2>
+            <section>
+                <p>
+                    Las tags más importante que cualquier sitio debe tener son 
+                    <span class="mono">html</span>, <span class="mono">head</span>
+                    y <span class="mono">body</span>. La primera es la que define 
+                    los límites del documento, sin esa tag no existe nada. La 
+                    segunda es para definir información relevante al sitio pero que 
+                    no va a ser visible para el usuario, eso incluye metadatos y un 
+                    poco de información extra para que el navegador sepa como 
+                    interpretar el sitio. Por último, <span class="mono">body</span>
+                    es donde va el contenido del sitio, básicamente todo.
+                    <br>
+                    Cualquier sitio normal sigue el siguiente esquema:
+                </p>
+                <pre>
+&lthtml>
+    &lthead>
+        Metadatos, estilo, etc...
+    &lt/head>
+    &ltbody>
+        Contenido
+    &lt/body>
+&lt/html></pre>
+                <p>
+                    Todo lo que están viendo ahora mismo está adentro del 
+                    <span class="mono">body</span>.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2 style="background-color: green;">
+                ¡Pueden ver la estructura de este sitio!
+            </h2>
+            <section>
+                <p>
+                    Los navegadores vienen con un "inspector" que puede 
+                    mostrar la estructura entera de cualquier sitio que 
+                    visiten. En general se abre con F12 o haciendo click 
+                    izquierdo en algún lado y dándole a "inspeccionar 
+                    elemento" (o algo así).
+                    <br>
+                    El inspector también puede mostrar muchas cosas 
+                    más que son muy útiles para el desarrollo web.
+                </p>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
