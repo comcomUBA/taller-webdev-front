@@ -106,6 +106,410 @@
                 </p>
             </section>
         </section>
+        <section>
+            <h2>
+                Contenidos de <span class="mono">head</span>, metadatos
+            </h2>
+            <!--
+                El uso de los h3 en esta sección no es particularmente 
+                correcto, pero me gusta como se ve y me ahorra laburo. 
+            -->
+            <section>
+                <h3 class="mono">
+                    &lttitle>Taller de WebDev&lt/title>
+                </h3>
+                <p>
+                    El elemento <span class="mono">title</span> se usa 
+                    para elegir el título de la página. Dicho título es 
+                    el que se ve en la pestaña correspondiente del navegador.
+                </p>
+            </section>
+            <hr>
+            <section>
+                <h3 class="mono">
+                    &ltlink rel="stylesheet" href="diapos.css">
+                </h3>
+                <p>
+                    <span class="mono">link</span> define relaciones con 
+                    recursos externos al documento. Se usa principalmente 
+                    para elegir la(s) hoja(s) de estilos (CSS) pero también 
+                    otras cosas como el ícono del sitio (suele aparecer al 
+                    lado del título). En el caso más general usa el atributo 
+                    <span class="mono">href</span> para definir la dirección 
+                    del recurso y <span class="mono">rel</span> para 
+                    especificar cual es dicha relación.
+                </p>
+            </section>
+            <hr>
+            <section>
+                <h3 class="mono">
+                    &ltstyle>...&lt/style>
+                </h3>
+                <p>
+                    <span class="mono">style</span> permite agregar estilo 
+                    directamente ahí pero no es muy común hacer eso. En este 
+                    documento no usamos este elemento.
+                </p>
+            </section>
+            <hr>
+            <section>
+                <h3 class="mono">
+                    &ltmeta charset="UTF-8">
+                </h3>
+                <p>
+                    <span class="mono">meta</span> sirve para agregar 
+                    cualquier otro tipo de información que no se pueda 
+                    representar con las tags anteriores.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2>Estructura principal pero menos principal</h2>
+            <section>
+                <p>
+                    HTML viene con los elementos 
+                    <span class="mono">header</span>, 
+                    <span class="mono">main</span> y 
+                    <span class="mono">footer</span> para organizar el sitio 
+                    en esas tres partes. También incluye cosas como 
+                    <span class="mono">aside</span> para cosas que justamente 
+                    deberían ir a un costado, 
+                    <span class="mono">article</span> para artículos, etc. 
+                    (todas bastante auto explicativas).
+                    <br>
+                    Sin embargo, suele pasar (y es discutible si es algo bueno 
+                    o malo) que el único elemento que se termina usando para 
+                    organizar el sitio es <span class="mono">div</span>. El 
+                    elemento justamente es un contenedor genérico que no 
+                    representa nada por si mismo.
+                    <br>
+                    Todos estos elementos tienen formato "block", que, ahora 
+                    mismo y sin entrar en detalles, significa que ocupan el 
+                    ancho entero del sitio. También implica otras cosas pero 
+                    todo eso va a importar más cuando nos pongamos con los 
+                    estilos.
+                </p>
+            </section>
+            <hr>
+            <section>
+                <p>
+                    Este documento sigue ese patrón de 
+                    <span class="mono">header</span>, 
+                    <span class="mono">main</span> y 
+                    <span class="mono">footer</span> y después divide el 
+                    resto en <span class="mono">section</span>s que a su 
+                    vez también están divididas en más 
+                    sub<span class="mono">section</span>s. Cada una de estas 
+                    cajas grandes son secciones y los textos divididos por 
+                    rayas son esas subsecciones. Esas rayas son el elemento 
+                    <span class="mono">hr</span> que se usa para separar cosas.
+                    <br>
+                    En particular, no se usa ningún 
+                    <span class="mono">div</span> (o por lo menos no hasta 
+                    este punto, todavía estoy escribiendo jiju (al final 
+                    si usé divs)).
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2>Texto</h2>
+            <section>
+                <p>
+                    Los elementos <span class="mono">hN</span>, donde la 
+                    <em>N</em> va de 1 a 6, son encabezados. La importancia 
+                    va de menor a mayor, donde <span class="mono">h1</span> 
+                    es el título principal del documento (y debería 
+                    haber solo uno) y <span class="mono">h6</span> es un 
+                    título bastante menor.
+                </p>
+                <!-- Usar h1 en esta parte del documento está "mal" -->
+                <!-- (y en general usar títulos de esta forma) -->
+                <h1>h1</h1>
+                <h2>h2</h2>
+                <h3>h3</h3>
+                <h4>h4</h4>
+                <h5>h5</h5>
+                <h6>h6</h6>
+                <p>
+                    Los navegadores les ponen estilos por defecto para 
+                    reflejar la "importancia", pero todo eso se puede cambiar.
+                </p>
+            </section>
+            <hr>
+            <section>
+                <p>
+                    El elemento <span class="mono">p</span> representa un 
+                    párrafo, aunque se puede meter todo el texto que quieran 
+                    ahí adentro. Todo este texto y el resto de párrafos en 
+                    estas diapos usan este elemento.
+                </p>
+            </section>
+            <hr>
+            <section>
+                <p>
+                    Esos son los principales elementos que contienen texto y 
+                    ambos tienen formato block.
+                </p>
+            </section>
+            <hr>
+            <section>
+                <p>
+                    Pero también hay elementos que modifican el texto que 
+                    está adentro de los <span class="mono">p</span> y 
+                    <span class="mono">h</span> (o en cualquier otro 
+                    contexto):
+                </p>
+                <ul>
+                    <li>
+                        <a href="https://youtu.be/dQw4w9WgXcQ?si=xonHVB3EAdHXwCqj">
+                            <span class="mono">a</span> es para agregar links
+                        </a>
+                    </li>
+                    <li>
+                        <strong>
+                            <span class="mono">strong</span> es para marcar 
+                            importancia</strong>
+                        </strong>
+                    </li>
+                    <li>
+                        <em>
+                            <span class="mono">em</span> es para énfasis
+                        </em>
+                    </li>
+                </ul>
+                <p>
+                    etc.
+                    <br>
+                    Al igual que <span class="mono">div</span>, la versión 
+                    genérica de los modificadores es 
+                    <span class="mono">span</span>. A lo largo de este 
+                    documento lo estuvimos usando para marcar 
+                    <span class="mono">texto que debería verse como 
+                    código</span>.
+                </p>
+            </section>
+            <hr>
+            <section>
+                <p>
+                    Todos estos elementos tienen formato "inline", lo cual por 
+                    ahora solo implica que van en el medio del contenido.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2>Otros elementos útiles</h2>
+            <section>
+                <h3>Listas</h3>
+                <div class="two-columns">
+                    <div>
+                        <p class="mono">&ltul></p>
+                        <ul style="list-style-position: inside;">
+                            <li><span class="mono">&ltli></span>
+                                Un item
+                            <span class="mono">&lt/li></span></li>
+                            <li><span class="mono">&ltli></span>
+                                Otro item
+                            <span class="mono">&lt/li></span></li>
+                            <li><span class="mono">&ltli></span>
+                                Woag
+                            <span class="mono">&lt/li></span></li>
+                        </ul>
+                        <p class="mono">&lt/ul></p>
+                    </div>
+                    <div>
+                        <p class="mono">&ltol></p>
+                        <ol style="list-style-position: inside;">
+                            <li><span class="mono">&ltli></span>
+                                Estos items
+                            <span class="mono">&lt/li></span></li>
+                            <li><span class="mono">&ltli></span>
+                                están
+                            <span class="mono">&lt/li></span></li>
+                            <li><span class="mono">&ltli></span>
+                                numerados
+                            <span class="mono">&lt/li></span></li>
+                        </ol>
+                        <p class="mono">&lt/ol></p>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <h3>Tablas</h3>
+                <p class="mono">&lttable></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="4">
+                                <span class="mono">&ltthead></span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span class="mono">&lttr></span>
+                            </th>
+                            <th>
+                                <span class="mono">&ltth></span>Título 1<span class="mono">&lt/th></span>
+                            </th>
+                            <th>
+                                <span class="mono">&ltth></span>Título 2<span class="mono">&lt/th></span>
+                            </th>
+                            <th>
+                                <span class="mono">&lt/tr></span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="4">
+                                <span class="mono">&lt/thead></span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="4">
+                                <span class="mono">&lttbody></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="mono">&lttr></span></td>
+                            <td>
+                                <span class="mono">&lttd></span>Celda 1,1<span class="mono">&lt/td></span>
+                            </td>
+                            <td>
+                                <span class="mono">&lttd></span>Celda 1,2<span class="mono">&lt/td></span>
+                            </td>
+                            <td><span class="mono">&lt/tr></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="mono">&lttr></span></td>
+                            <td>
+                                <span class="mono">&lttd></span>Celda 2,1<span class="mono">&lt/td></span>
+                            </td>
+                            <td>
+                                <span class="mono">&lttd></span>Celda 2,2<span class="mono">&lt/td></span>
+                            </td>
+                            <td><span class="mono">&lt/tr></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="mono">&lttr></span></td>
+                            <td>
+                                <span class="mono">&lttd></span>Celda 3,1<span class="mono">&lt/td></span>
+                            </td>
+                            <td>
+                                <span class="mono">&lttd></span>Celda 3,2<span class="mono">&lt/td></span>
+                            </td>
+                            <td><span class="mono">&lt/tr></span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <span class="mono">&lt/tbody></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="mono">&lt/table></p>
+            </section>
+            <hr>
+            <section>
+                <h3>Imágenes</h3>
+                <div class="mono">
+                    <p>&ltimg</p>
+                    <div class="tabbed">
+                        <p>src="https://i.ibb.co/xNwMGxq/pink.jpg"</p>
+                        <p>alt="PinkPantheress con una cara rara"</p>
+                        <p>height="300"</p>
+                    </div>
+                    <p>></p>
+                </div>
+                <img 
+                    src="https://i.ibb.co/xNwMGxq/pink.jpg"
+                    alt="PinkPantheress con una cara rara"
+                    height="300"
+                >
+            </section>
+            <hr>
+            <section>
+                <h3>Formularios</h3>
+                <form>
+                    <label>Nombre</label>
+                    <input type="text" name="nombre" placeholder="Tu nombre">
+                    <br>
+                    <label>Edad</label>
+                    <input type="number" name="edad" placeholder="Tu edad">
+                    <br>
+                    <label>¿Qué día es hoy?</label>
+                    <input type="date" name="fecha">
+                    <br>
+                    <label>Acepto los términos y condiciones</label>
+                    <input type="checkbox" name="terminos">
+                    <br>
+                    <input type="submit" value="Enviar">
+                </form>
+            </section>
+            <hr>
+            <section>
+                <h3>Comentarios</h3>
+                <p>
+                    Se pueden escribir comentarios con la siguiente 
+                    sintaxis: 
+                    <br>
+                    <span class="mono">&lt!-- Comentario --&gt</span>
+                    <br>
+                    Se puede escribir lo que sea entre la apertura y el 
+                    cierre de un comentario y se va a ver así:
+                    <br>
+                    <!--
+                        Esto es un comentario. Nada de esto se va a ver 
+                        en el documento.
+                        <div>
+                            <h4>Pedazo invisible</h4>
+                            <p>
+                                Aunque pongamos código acá adentro, el
+                                navegador no lo va a leer.
+                            </p>
+                        <div>
+                    -->
+                    <br>
+                    Exacto, no se ve. El espacio en blanco solo está porque 
+                    hay dos <span class="mono">br</span>s por fuera del
+                    comentario. El navegador ignora por completo todo lo 
+                    que vaya en el comentario.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2 style="background-color: green;">
+                Ejercicio! Armemos un perfil
+            </h2>
+            <section>
+                <p>
+                    En este taller los ejercicios están divididos en 
+                    distintos archivos .html y .css. En la carpeta 
+                    "ejercicios" están los archivos a completar y en 
+                    "resueltos" los archivos completos. La idea es que solo 
+                    miren los resueltos al final para comparar con lo que 
+                    hicieron o que a lo sumo los abran (en el navegador, no 
+                    un editor de texto) para ver cómo podrían hacer que se 
+                    vea el resultado. En los archivos a completar se pueden 
+                    ver las consignas comentadas.
+                    <br>
+                    Este primer ejercicio es solo de html y se puede resolver 
+                    usando las tags que vimos hasta ahora. La idea es que nos 
+                    cuenten un poco sobre ustedes y sobre la relación que 
+                    tienen con la carrera.
+                    <br>
+                    Si están viendo estas diapos desde el repo del taller y 
+                    no tocaron la organización de los archivos, pueden abrir 
+                    el sitio que tienen que modificar haciendo click 
+                    <a href="../../ejercicios/perfil.html">acá</a>.
+                </p>
+            </section>
+        </section>
     </main>
+    <footer>
+        <a href="css_introducción.html">
+            Agreguemos <em>estilo</em>
+        </a>
+    </footer>
 </body>
 </html>

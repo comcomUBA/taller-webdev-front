@@ -8,3 +8,40 @@ header {
         };
     }
 }
+
+table {
+  border: 2px solid rgb(140 140 140);
+  text-align: center;
+}
+
+thead {
+    background-color: bisque;
+}
+
+tbody {
+    background-color:beige;
+}
+
+th, td {
+  border: 1px solid rgb(160 160 160);
+  padding: 10px;
+}
+
+footer {
+    a, a:visited {
+        display: block;
+        margin: 30px;
+        padding: 30px;
+        border-radius: 30px;
+
+
+        background-color: #1572b6;
+        color: white;
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+
+        box-shadow: #1572b6 0 0 20px;
+    }
+}
