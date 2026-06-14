@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de WebDev</title>
+
+    <link rel="stylesheet" href="https://lalten.github.io/lmweb/style/latinmodern-sans.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="diapos.css">
+    <link rel="stylesheet" href="css_introduccion.css">
+</head>
+<body>
+    <header>
+        <p>
+            <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/500px-CSS3_logo_and_wordmark.svg.png" 
+                alt="Logo de HTML 5"
+            >
+        </p>
+    </header>
+    <main>
+        <section>
+            <h2>Estilo, CSS</h2>
+            <section>
+                <p>
+                    Si entraron a cualquier sitio web de los últimos 20 años, 
+                    seguramente hayan notado que se ven bastante más complejos 
+                    que lo que hicimos hasta ahora con HTML.
+                    <br>
+                    Entra CSS, Cascading Style Sheets. El lenguaje existe 
+                    para cambiar la forma en la que se ven los documentos HTML. 
+                    Hasta ahora dependíamos de cómo los distintos elementos 
+                    fueran renderizados por el navegador, pero ahora podemos 
+                    cambiar eso completamente.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2 class="bg-green">¿Quién necesita JS?</h2>
+            <section>
+                <p>
+                    Como dato curioso: HTML y CSS juntos son turing complete. 
+                    Eso significa que, técnicamente, se pueden usar para hacer 
+                    cualquier cosa que los otros lenguajes de programación 
+                    puedan hacer, incluyendo JavaScript. Esto no significa que 
+                    eso sea una buena idea. Estos lenguajes no fueron pensados 
+                    para eso y tratar de usarlos de esa forma sería 
+                    increíblemente incómodo.
+                    <br>
+                    De todas formas, cuando alguien les diga que HTML y CSS no 
+                    son lenguajes de programación, pueden responder con este 
+                    dato.
+                    <br>
+                    <a href="https://lyra.horse/css-clicker/">
+                        Ejemplo de cosas que se pueden hacer sin JS
+                    </a>
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2>Sintaxis</h2>
+            <section>
+                <p>
+                    CSS funciona con <em>reglas</em>. Un archivo .css (o una 
+                    tag <span class="mono">style</span> en un archivo .html) 
+                    contiene tantas reglas como uno quiera, una atrás de otra, 
+                    definiendo a qué partes del documento se le deberían aplicar 
+                    qué propiedades. Estas reglas siguen el siguiente formato:
+                </p>
+                <div class="mono">
+                    <p>selector {</p>
+                    <div class="tabbed">
+                        <p>propiedad1: valor1;</p>
+                        <p>propiedad2: valor2;</p>
+                        <p>...</p>
+                    </div>
+                    <p>}</p>
+                </div>
+                <p>
+                    El selector indica qué elementos van a ser afectados por 
+                    la regla. Las propiedades indican cómo van a ser afectados.
+                </p>
+            </section>
+            <hr>
+            <section>
+                <p>
+                    Los selectores más básicos son selectores de tipo, de 
+                    clase y de id. 
+                    <br>
+                    Un selector de tipo dice que la regla va a aplicar a todos 
+                    los elementos del tipo indicado. Por ejemplo, si el 
+                    selector es <span class="mono">p</span>, todos los 
+                    elementos <span class="mono">p</span> van a tener la regla.
+                    <br>
+                    Los selectores de clase y de id funcionan igual, pero hay 
+                    que marcarlos con un punto y con un numeral 
+                    respectivamente. Por ejemplo, si el selector es 
+                    <span class="mono">.contenedor</span>, todos los elementos 
+                    con la clase "contenedor" van a tener esa regla. Lo mismo 
+                    con <span class="mono">#titulo-principal</span> y el 
+                    elemento con id "titulo-principal".
+                </p>
+            </section>
+            <hr>
+            <section>
+                <p>
+                    El título de la sección de "¿Quién necesita JS?" de antes 
+                    tiene el fondo verde porque tiene la clase "bg-green", que 
+                    está asociada a la regla
+                </p>
+                <div class="mono">
+                    <p>.bg-green {</p>
+                    <div class="tabbed">
+                        <p>background-color: green;</p>
+                    </div>
+                    <p>}</p>
+                </div>
+            </section>
+        </section>
+        <section>
+            <h2>¿Clases e ids?</h2>
+            <section>
+                <p>
+                    Pero, ¿qué son las clases y los ids?
+                    <br>
+                    Todo elemento de HTML puede tener los atributos 
+                    <span class="mono">class</span> e 
+                    <span class="mono">id</span> El primero es una lista de 
+                    nombres separados con espacios. El segundo es un solo 
+                    nombre.
+                    <br>
+                    La idea de las clases es que sean indicadores de 
+                    características compartidas por múltiples elementos a lo 
+                    largo del documento. También, un elemento puede (y suele) 
+                    tener múltiples clases. La diferencia con los ids es que 
+                    el id debe ser único. 
+                    <br> 
+                    El motivo por el que estos atributos existen es para poder 
+                    identificar ciertos elementos o conjuntos de elementos del 
+                    sitio. Como ya vimos, en CSS esto nos deja aplicar reglas 
+                    de forma mucho más específica. En el caso de JS, nos 
+                    permitiría encontrar e interactuar elementos de la misma 
+                    forma.
+                </p>
+            </section>
+            <hr>
+            <section>
+                <div class="mono" style="background-color: rgb(255, 178, 150);">
+                    <p>
+                        &ltdiv class="contenedor" id="contenedor-principal">
+                    </p>
+                    <p class="tabbed">
+                        &lth1 id="titulo-principal">Buenas tardes&lth1>
+                    </p>
+                    <p>&ltdiv></p>
+                    <p>
+                        &ltdiv class="contenedor azul">...&ltdiv>
+                    </p>
+                </div>
+                <div class="two-columns">
+                    <div class="mono" style="background-color: lightskyblue;">
+                        <p>.contenedor {</p>
+                        <p class="tabbed">display: flex;</p>
+                        <p>}</p>
+                        <p>#contenedor-principal {</p>
+                        <p class="tabbed">background-color: orange;</p>
+                        <p>}</p>
+                        <p>#titulo-principal {</p>
+                        <p class="tabbed">color: red;</p>
+                        <p>}</p>
+                        <p>.azul {</p>
+                        <p class="tabbed">background-color: blue;</p>
+                        <p>}</p>
+                    </div>
+                    <div id="ejemplo-clases-ids">
+                        <div class="contenedor" id="contenedor-principal">
+                            <h1 id="titulo-principal">Buenas tardes</h1>
+                        </div>
+                        <div class="contenedor azul">...</div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section>
+            <h2>Más selectores</h2>
+            <section>
+                <p>
+                    Pero esos tres no son los únicos tipos de selectores. Se 
+                    pueden combinar entre sí de distintas formas para armar 
+                    selectores mucho más complejos que nos permiten ser mucho 
+                    más específicos sobre a qué partes del sitio se les debería 
+                    aplicar qué reglas.
+                    <br>
+                    Algunos ejemplos son:
+                </p>
+                <ul>
+                    <li>
+                        <span class="mono">A, B</span> para indicar que la 
+                        regla debe aplicar a <span class="mono">A</span> y a 
+                        <span class="mono">B</span>.
+                    </li>
+                    <li>
+                        <span class="mono">A B</span> para indicar que la 
+                        regla debe aplicar a los <span class="mono">B</span>
+                        que sean descendientes de <span class="mono">A</span>.
+                    </li>
+                    <li>
+                        <span class="mono">A:PC</span> para indicar que la 
+                        regla debe aplicar a <span class="mono">A</span> 
+                        cuando tiene la pseudoclase 
+                        <span class="mono">PC</span>.
+                    </li>
+                </ul>
+                <p>Entre otros.</p>
+            </section>
+            <hr>
+            <section>
+                <p>
+                    Al botón al final de este sitio le aplica una regla que se 
+                    ve así:
+                </p>
+                <div class="mono">
+                    <p>footer {</p>
+                    <div class="tabbed">
+                        <p>a, a:visited {</p>
+                        <p class="tabbed">...</p>
+                        <p>}</p>
+                    </div>
+                    <p>}</p>
+                </div>
+                <p>
+                    Lo cual significa que la regla le aplica a los 
+                    <span class="mono">a</span> que sean descendientes 
+                    de <span class="mono">footer</span> y que también les 
+                    aplica cuando fueron visitados. Como hay solo un 
+                    <span class="mono">footer</span> y ese 
+                    <span class="mono">footer</span> solo tiene un 
+                    <span class="mono">a</span>, la regla solo aplica a ese 
+                    botón.
+                    <br>
+                    También hay un poco de <em>sugar syntax</em> ocurriendo, 
+                    ya que la anidación de <span class="mono">a</span> adentro 
+                    de <span class="mono">footer</span> es equivalente a 
+                    poner un espacio. Esa regla es equivalente a las 
+                    siguientes:
+                </p>
+                <div class="mono">
+                    <p>footer a {</p>
+                    <p class="tabbed">...</p>
+                    <p>}</p>
+                    <p>footer a:visited {</p>
+                    <p class="tabbed">...</p>
+                    <p>}</p>
+                </div>
+            </section>
+        </section>
+        <section>
+            <h2>Valores para las propiedades</h2>
+            <section>
+                <p>
+                    Ya hablamos de los selectores. De las propiedades no hay 
+                    mucho que decir, hay un montón, cada una tiene un nombre 
+                    único y ciertos valores que puede tomar. Pero esos valores 
+                    no son ni un poquito sencillos.
+                    <br>
+                    Por ahora vamos a concentrarnos en dos tipos de valores 
+                    posibles:
+                </p>
+                <ul>
+                    <li>
+                        <em>keyword</em>: Son valores con nombres específicos 
+                        y hacen cosas específicas dependiendo de para qué 
+                        propiedad están siendo usados.
+                    </li>
+                    <li>
+                        Magnitudes: Son valores de la forma <em>Nu</em>, 
+                        donde <em>u</em> es la unidad y <em>N</em> es la 
+                        cantidad de dicha unidad. Estas unidades pueden ser 
+                        absolutas o relativas. Las absolutas son siempre lo 
+                        mismo, sin importar en donde aparezcan*. Las relativas 
+                        representan distintas magnitudes dependiendo del 
+                        contexto, ya sea dado por el elemento al que se está 
+                        aplicando la regla o por el propio navegador en el que 
+                        está viéndose el sitio.
+                    </li>
+                    <p>
+                        Más adelante vamos a profundizar un poco sobre las 
+                        unidades, pero por ahora algunas útiles e interesantes 
+                        son <span class="mono">px</span>,
+                        <span class="mono">cm</span>, 
+                        <span class="mono">%</span> y 
+                        <span class="mono">em</span>.
+                    </p>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <h2>Algunas propiedades básicas</h2>
+            <section class="mono">
+                <p style="color: red;">
+                    color: red;
+                </p>
+                <p style="color: #00ff00;">
+                    color: #00ff00;
+                </p>
+                <p style="color: rgb(0, 0, 255);">
+                    color: rgb(0, 0, 255);
+                </p>
+            </section>
+            <hr>
+            <section class="mono">
+                <p style="background-color: yellow;">
+                    background-color: yellow;
+                </p>
+                <p style="background-color: #00ffff;">
+                    background-color: #00ffff;
+                </p>
+                <p style="background-color: rgb(255, 0, 255);">
+                    background-color: rgb(255, 0, 255);
+                </p>
+            </section>
+            <hr>
+            <section class="mono">
+                <p style="border: 5px solid orange;">
+                    border: 5px solid orange;
+                </p>
+                <p style="border: 20px double black;">
+                    border: 20px double black;
+                </p>
+            </section>
+            <hr>
+            <section class="mono">
+                <p style="font-size: larger;">
+                    font-size: larger;
+                </p>
+                <p style="font-size: 14pt;">
+                    font-size: 14pt;
+                </p>
+                <p style="font-size: 2em;">
+                    font-size: 2em;
+                </p>
+            </section>
+            <hr>
+            <section>
+                <p style="font-family: sans-serif;">
+                    font-family: sans-serif;
+                </p>
+                <p style="font-family: serif;">
+                    font-family: serif;
+                </p>
+                <p style="font-family: monospace;">
+                    font-family: monospace;
+                </p>
+                <p>
+                    (Y se puede poner la fuente que quieran pero hay que 
+                    tener cuidado porque no todos tienen las mismas fuentes)
+                </p>
+            </section>
+            <hr>
+            <section class="mono">
+                <p style="text-align: left;">
+                    text-align: left;
+                </p>
+                <p style="text-align: center;">
+                    text-align: center;
+                </p>
+                <p style="text-align: right;">
+                    text-align: right;
+                </p>
+            </section>
+            <hr>
+            <section class="mono">
+                <p style="
+                    background-image: url(https://cdn.britannica.com/38/111338-050-D23BE7C8/Stars-NGC-290-Hubble-Space-Telescope.jpg);
+                    color: orange;
+                ">
+                    background-image: url(https://cdn.britannica.com/38/111338-050-D23BE7C8/Stars-NGC-290-Hubble-Space-Telescope.jpg);
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2 class="bg-green">
+                Ejercicio! Un poco de historia
+            </h2>
+            <section>
+                <p>
+                    En este ejercicio tienen que retocar y arreglar el 
+                    estilo del documento sobre la historia de nuestro 
+                    departamento. Pueden usar las propiedades que vimos 
+                    en la diapositiva anterior y también pueden buscar otras 
+                    propiedades que les interesen en internet.
+                    <br>
+                    Este es un buen momento para mencionar 
+                    <a href="https://developer.mozilla.org/">developer.mozilla.org</a>, 
+                    lugar en el que está documentado casi todo lo relacionado 
+                    a HTML, CSS y JS. El sitio tiene buenas explicaciones, 
+                    tutoriales, ejemplos y ejercicios. Está buenísimo. Pueden 
+                    buscar ahí lo que quieran para resolver los ejercicios del 
+                    taller.
+                    <br>
+                    Eso si, por ahora eviten meterse con reglas que cambien 
+                    el "layout" del sitio. Eso incluye padding, márgenes, 
+                    posicionamiento, display, etc. Después de este ejercicio 
+                    nos vamos a meter con esos temas.
+                    <br>
+                    <a href="../../ejercicios/historia.html">Sitio a modificar</a>
+                </p>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <a href="css_layout.html">
+            Juguemos con cajas
+        </a>
+    </footer>
+</body>
+</html>

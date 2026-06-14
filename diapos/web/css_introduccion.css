@@ -9,22 +9,19 @@ header {
     }
 }
 
-table {
-  border: 2px solid rgb(140 140 140);
-  text-align: center;
-}
-
-thead {
-    background-color: bisque;
-}
-
-tbody {
-    background-color:beige;
-}
-
-th, td {
-  border: 1px solid rgb(160 160 160);
-  padding: 10px;
+#ejemplo-clases-ids {
+    .contenedor {
+        display: flex;
+    }
+    #contenedor-principal {
+        background-color: orange;
+    }
+    #titulo-principal {
+        color: red;
+    }
+    .azul {
+        background-color: blue;
+    }
 }
 
 footer {
