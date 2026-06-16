@@ -444,12 +444,476 @@
                 </div>
             </section>
         </section>
+        <!-- 
+            El overflow: hidden; de diapos.css hace que sticky
+            no funcione. Hay que ponerlo en visible. Esto también 
+            hace que se rompan las puntas de arriba de la 
+            sección así que hay que arreglarlas a mano en el h2.
+        -->
+        <section style="overflow: visible;">
+            <h2 style="border-radius: 20px 20px 0 0;">
+                Posición
+            </h2>
+            <section style="
+                position: relative;
+            ">
+                <p class="mono">position: relative</p>
+                <p>
+                    (Sin esto, los elementos con 
+                    <span class="mono">absolute</span>  se 
+                    posicionarían relativo a el elemento raíz)
+                </p>
+                <br>
+                <div class="caja mono" style="
+                    position: static;   
+                ">
+                    <p>
+                        position: static;
+                    </p>
+                </div>
+                <br>
+                <div class="caja mono" style="
+                    position: sticky;
+                    top: 0;
+                ">
+                    <p>
+                        position: sticky; <br>
+                        top: 0;
+                    </p>
+                </div>
+                <br>
+                <div class="caja mono" style="
+                    position: relative;
+                    top: 10px;
+                    left: 30px;
+                ">
+                    <p>
+                        position: relative; <br>
+                        top: 10px; <br>
+                        left: 30px;
+                    </p>
+                </div>
+                <br>
+                <div class="caja mono" style="
+                    position: relative;
+                    bottom: 1cm;
+                ">
+                    <p>
+                        position: relative; <br>
+                        bottom: 10px;
+                    </p>
+                </div>
+                <div class="caja mono" style="
+                    position: absolute;
+                    top: 2.4cm;
+                    left: 10cm;
+                ">
+                    <p>
+                        position: absolute; <br>
+                        top: 2.4cm; <br>
+                        left: 10cm;
+                    </p>
+                </div>
+                <div class="caja mono" style="
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                ">
+                    <p>
+                        position: absolute; <br>
+                        bottom: 10px; <br>
+                        right: 10px;
+                    </p>
+                </div>
+                <!-- <div class="caja" style="
+                    position: fixed;
+                    bottom: 50px;
+                    right: 50px;
+                ">
+                    <p>
+                        position: fixed; <br>
+                        bottom: 50px; <br>
+                        right: 50px;
+                    </p>
+                </div> -->
+                <br>
+                <p>
+                    También está 
+                    <span class="mono">position: fixed;</span><br>
+                    pero queda bastante incómodo para el resto <br>
+                    de las "diapos". Pueden descomentarlo y ver <br>
+                    cómo funciona.
+                </p>
+            </section>
+        </section>
         <section>
-            <h2>Posición</h2>
+            <h2>
+                La propiedad <span class="mono">display</span>
+            </h2>
             <section>
-                
+                <p>
+                    La propiedad <span class="mono">position</span> 
+                    se usa para acomodar elementos de forma muy 
+                    específica. Muchas veces, lo que queremos es acomodar 
+                    varios elementos entre sí y de acuerdo a la caja que 
+                    los contiene. Ahí surgen las <em>grids</em> y las 
+                    <em>flexible boxes</em>.
+                    <br>
+                    Una grid se usa para partir un contenedor en 
+                    secciones rectangulares. Se puede partir en tantas 
+                    secciones como uno quiera y pueden tener cualquier 
+                    tamaño. Es como una especie de mondrian.
+                    <br>
+                    Una flexible box se usa para acomodar elementos de 
+                    forma que cambien sus tamaños acorde a la cantidad de 
+                    espacio que haga falta. Son tan útiles que suelen 
+                    estar por todos lados.
+                    <br>
+                    Un elemento se pone en modo grid o flexbox usando la 
+                    propiedad <span class="mono">display</span> con los 
+                    valores <span class="mono">grid</span> y 
+                    <span class="mono">flex</span> respectivamente. Hasta 
+                    ahora no la habíamos mencionado, pero esa propiedad 
+                    también puede definir si el elemento es 
+                    <span class="mono">inline</span> o 
+                    <span class="mono">block</span>. También se le puede 
+                    dar el valor <span class="mono">none</span> para 
+                    sacar el elemento del sitio.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2>Grid</h2>
+            <section>
+                <p class="mono">
+                    display: grid; <br>
+                    grid-template-rows: 1fr 2fr 1fr 1fr; <br>
+                    grid-template-columns: 50% 100px auto; <br>
+                    grid-template-areas: <br>
+                </p>
+                <p class="mono tabbed">
+                    "hola hola   .     " <br>
+                    "hola hola   .     " <br>
+                    "hola hola   .     " <br>
+                    ".    tardes tardes"; <br>
+                </p>
+                <p class="mono">
+                    gap: 10px; <br>
+                </p>
+                <br>
+                <div class="mono" id="ejemplo-grid">
+                    <div id="ej-grid-hola">
+                        <p>
+                            grid-area: hola;
+                        </p>
+                    </div>
+                    <div id="ej-grid-buenas">
+                        <p>
+                            grid-row-start: 2; <br>
+                            grid-row-end: 4; <br>
+                            grid-column: 3 / 4;
+                        </p>
+                    </div>
+                    <div id="ej-grid-tardes">
+                        <p>
+                            grid-row: 4 / span 1; <br>
+                            grid-column: 2 / span 2;
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <p>
+                    También hay otras propiedades como 
+                    <span class="mono">justify-items</span>, 
+                    <span class="mono">align-items</span>,
+                    las mismas pero con 
+                    <span class="mono">content</span> en vez de 
+                    <span class="mono">items</span> y las mismas 
+                    pero con <span class="mono">self</span> en 
+                    vez de <span class="mono">items</span>, que 
+                    permiten ajustar todavía más la posición de los 
+                    elementos adentro de la grid.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2>
+                Flex
+            </h2>
+            <section>
+                <p>
+                    Todos los ejemplos que vienen ahora son con 
+                    <span class="mono">display: flex;</span>
+                </p>
+            </section>
+            <hr>
+            <section>
+                <p>
+                    <span class="mono">flex-direction: row</span>
+                    (por defecto)
+                </p>
+                <div class="flex caja2">
+                    <div class="caja">Caja 1</div>
+                    <div class="caja">Caja 2</div>
+                    <div class="caja">Caja 3</div>
+                    <div class="caja">Caja 4</div>
+                    <div class="caja">Caja 5</div>
+                </div>
+                <br>
+                <p class="mono">flex-direction: column</p>
+                <div class="flex caja2" style="
+                    flex-direction: column;
+                ">
+                    <div class="caja">Caja 1</div>
+                    <div class="caja">Caja 2</div>
+                    <div class="caja">Caja 3</div>
+                    <div class="caja">Caja 4</div>
+                    <div class="caja">Caja 5</div>
+                </div>
+                <br>
+                <p class="mono">
+                    flex-direction: row-reverse
+                </p>
+                <div class="flex caja2" style="
+                    flex-direction: row-reverse;
+                ">
+                    <div class="caja">Caja 1</div>
+                    <div class="caja">Caja 2</div>
+                    <div class="caja">Caja 3</div>
+                    <div class="caja">Caja 4</div>
+                    <div class="caja">Caja 5</div>
+                </div>
+                <br>
+                <p class="mono">
+                    flex-direction: column <br>
+                    gap: 10px;
+                </p>
+                <div class="flex caja2" style="
+                    flex-direction: column;
+                    gap: 10px;
+                ">
+                    <div class="caja">Caja 1</div>
+                    <div class="caja">Caja 2</div>
+                    <div class="caja">Caja 3</div>
+                    <div class="caja">Caja 4</div>
+                    <div class="caja">Caja 5</div>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <p class="mono">
+                    justify-content: start;
+                </p>
+                <div class="flex caja2" style="
+                    justify-content: start;
+                ">
+                    <div class="caja">Caja 1</div>
+                    <div class="caja">Caja 2</div>
+                    <div class="caja">Caja 3</div>
+                    <div class="caja">Caja 4</div>
+                    <div class="caja">Caja 5</div>
+                </div>
+                <br>
+                <p class="mono">
+                    justify-content: center;
+                </p>
+                <div class="flex caja2" style="
+                    justify-content: center;
+                ">
+                    <div class="caja">Caja 1</div>
+                    <div class="caja">Caja 2</div>
+                    <div class="caja">Caja 3</div>
+                    <div class="caja">Caja 4</div>
+                    <div class="caja">Caja 5</div>
+                </div>
+                <br>
+                <p class="mono">
+                    justify-content: end;
+                </p>
+                <div class="flex caja2" style="
+                    justify-content: end;
+                ">
+                    <div class="caja">Caja 1</div>
+                    <div class="caja">Caja 2</div>
+                    <div class="caja">Caja 3</div>
+                    <div class="caja">Caja 4</div>
+                    <div class="caja">Caja 5</div>
+                </div>
+                <br>
+                <p class="mono">
+                    justify-content: space-between;
+                </p>
+                <div class="flex caja2" style="
+                    justify-content: space-between;
+                ">
+                    <div class="caja">Caja 1</div>
+                    <div class="caja">Caja 2</div>
+                    <div class="caja">Caja 3</div>
+                    <div class="caja">Caja 4</div>
+                    <div class="caja">Caja 5</div>
+                </div>
+                <br>
+                <p class="mono">
+                    justify-content: space-around;
+                </p>
+                <div class="flex caja2" style="
+                    justify-content: space-around;
+                ">
+                    <div class="caja">Caja 1</div>
+                    <div class="caja">Caja 2</div>
+                    <div class="caja">Caja 3</div>
+                    <div class="caja">Caja 4</div>
+                    <div class="caja">Caja 5</div>
+                </div>
+                <br>
+                <p class="mono">
+                    justify-content: space-evenly;
+                </p>
+                <div class="flex caja2" style="
+                    justify-content: space-evenly;
+                ">
+                    <div class="caja">Caja 1</div>
+                    <div class="caja">Caja 2</div>
+                    <div class="caja">Caja 3</div>
+                    <div class="caja">Caja 4</div>
+                    <div class="caja">Caja 5</div>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <p>
+                    <span class="mono">align-items</span> es lo 
+                    mismo pero en el otro eje. Eso significa que 
+                    los <span class="mono">space-*</span> no 
+                    tienen sentido. Lo que si agrega es
+                    <span class="mono">stretch</span>, que viene 
+                    por defecto. En los ejemplos horizontales 
+                    cuesta verlo porque no agrandamos la caja 
+                    contenedora, pero en los ejemplos verticales 
+                    se nota mucho más.
+                </p>
+                <br>
+                <p>
+                    <span class="mono">align-items: stretch</span>
+                    (por defecto)
+                </p>
+                <div class="flex caja2" style="
+                    flex-direction: column;
+                    align-items: stretch;
+                ">
+                    <div class="caja">Caja 1</div>
+                    <div class="caja">Caja 2</div>
+                    <div class="caja">Caja 3</div>
+                    <div class="caja">Caja 4</div>
+                    <div class="caja">Caja 5</div>
+                </div>
+                <br>
+                <p class="mono">
+                    align-items: center;
+                </p>
+                <div class="flex caja2" style="
+                    flex-direction: column;
+                    align-items: center;
+                ">
+                    <div class="caja">Caja 1</div>
+                    <div class="caja">Caja 2</div>
+                    <div class="caja">Caja 3</div>
+                    <div class="caja">Caja 4</div>
+                    <div class="caja">Caja 5</div>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <p>
+                    <span class="mono">flex-wrap: nowrap</span>
+                    (por defecto)
+                </p>
+                <div class="flex caja2">
+                    <div class="caja">Caja 1</div>
+                    <div class="caja">Caja 2</div>
+                    <div class="caja">Caja 3</div>
+                    <div class="caja">Caja 4</div>
+                    <div class="caja">Caja 5</div>
+                    <div class="caja">Caja 6</div>
+                    <div class="caja">Caja 7</div>
+                    <div class="caja">Caja 8</div>
+                    <div class="caja">Caja 9</div>
+                    <div class="caja">Caja 10</div>
+                    <div class="caja">Caja 11</div>
+                    <div class="caja">Caja 12</div>
+                    <div class="caja">Caja 13</div>
+                    <div class="caja">Caja 14</div>
+                    <div class="caja">Caja 15</div>
+                </div>
+                <br>
+                <p class="mono">
+                    flex-wrap: wrap;
+                </p>
+                <div class="flex caja2" style="
+                    flex-wrap: wrap;
+                ">
+                    <div class="caja">Caja 1</div>
+                    <div class="caja">Caja 2</div>
+                    <div class="caja">Caja 3</div>
+                    <div class="caja">Caja 4</div>
+                    <div class="caja">Caja 5</div>
+                    <div class="caja">Caja 6</div>
+                    <div class="caja">Caja 7</div>
+                    <div class="caja">Caja 8</div>
+                    <div class="caja">Caja 9</div>
+                    <div class="caja">Caja 10</div>
+                    <div class="caja">Caja 11</div>
+                    <div class="caja">Caja 12</div>
+                    <div class="caja">Caja 13</div>
+                    <div class="caja">Caja 14</div>
+                    <div class="caja">Caja 15</div>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <p>
+                    En general, <span class="mono">flex</span> 
+                    trata de darle el espacio adecuado a los 
+                    elementos que contiene y acomodarlos de forma 
+                    correcta. Es muy útil para acomodar cosas 
+                    de manera dinámica.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2 class="bg-green">
+                Ejercicio! [ARMAR NUEVO EJERCICIO PARA FLEX]
+            </h2>
+            <section>
+                <p>aaweawewae</p>
+            </section>
+        </section>
+        <section>
+            <h2 class="bg-green">
+                Ejercicio! Promo para el taller
+            </h2>
+            <section>
+                <p>
+                    Como último ejercicio, queremos hacer una 
+                    especie de "folleto" para promocionar este
+                    mismo taller. Para organizar las distintas 
+                    secciones de forma adecuada, vamos a usar una 
+                    grid.
+                </p>
+                <p>
+                    <a href="https://grid.malven.co/">
+                        Cheatsheet de grid
+                    </a>
+                </p>
             </section>
         </section>
     </main>
+    <footer>
+        <a href="conclusion.html">
+            Terminando...
+        </a>
+    </footer>
 </body>
 </html>

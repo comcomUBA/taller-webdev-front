@@ -72,3 +72,7 @@ main {
 .bg-green {
     background-color: green;
 }
+
+.flex {
+    display: flex;
+}
