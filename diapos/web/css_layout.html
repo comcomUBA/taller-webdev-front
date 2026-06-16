@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de WebDev</title>
+
+    <link rel="stylesheet" href="https://lalten.github.io/lmweb/style/latinmodern-sans.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="diapos.css">
+    <link rel="stylesheet" href="css_layout.css">
+</head>
+<body>
+    <header>
+        <p>
+            <img 
+                src="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Box_model/boxmodel.png" 
+                alt="Modelo de caja de CSS"
+            >
+        </p>
+    </header>
+    <main>
+        <section>
+            <h2>El modelo de caja</h2>
+            <section>
+                <p>
+                    Hasta ahora solo cambiamos cómo se ven los elementos en 
+                    el sitio. Sin embargo, una de las cosas más potentes de 
+                    CSS es que también podemos cambiar cómo se organizan. 
+                    Vamos a cambiar el <em>layout</em> del sitio.
+                    <br>
+                    En CSS, todos los elementos están en cajas. Estas cajas 
+                    tienen 4 partes:
+                </p>
+                <ul>
+                    <li>
+                        El contenido: Lo que metemos en los elementos. Texto, 
+                        imágenes, otros elementos, etc.
+                    </li>
+                    <li>
+                        <em>Padding</em>: Es un relleno alrededor del 
+                        contenido. Suele verse como parte del elemento.
+                    </li>
+                    <li>
+                        Borde: El espacio entre el padding y el margen. 
+                        Marca el límite del elemento.
+                    </li>
+                    <li>
+                        Margen: El espacio entre el elemento y otros 
+                        elementos. En general no se ve como parte del 
+                        elemento. La interacción entre los márgenes de 
+                        dos elementos es rara.
+                    </li>
+                </ul>
+                <p>
+                    En ese orden desde adentro hacia afuera. 
+                </p>
+            </section>
+            <hr>
+            <section>
+                Por defecto, el ancho y alto de un elemento se calculan solo 
+                en base al contenido, por lo que hay que sumar el padding, 
+                borde y margen para conseguir el tamaño total de la caja. La 
+                regla <span class="mono">box-sizing: border-box</span> 
+                permite cambiar esto para que se calcule en base al contenido, 
+                padding y borde, sin incluir el margen.
+            </section>
+            <hr>
+            <section>
+                <p>
+                    Vean como interactuan las distintas partes de las cajas 
+                    entre sí inspeccionando estas de acá abajo.
+                </p>
+                <div id="ejemplo-modelo-caja">
+                    <div>
+                        <p>Caja 1</p>
+                        <div>Sub-caja 1</div>
+                        <div>Sub-caja 2</div>
+                    </div>
+                    <div>
+                        <p>Caja 2</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section>
+            <h2>Manipulando la parte de afuera de la caja</h2>
+            <section class="mono" id="ejemplos-padding">
+                <div style="padding: 50px;">
+                    <p>
+                        padding: 50px;
+                    </p>
+                </div>
+                <div style="padding: 0.5cm 70px;">
+                    <p>
+                        padding: 0.5cm 70px;
+                    </p>
+                </div>
+                <div style="padding: 0.3in 0.9in 0 2in;">
+                    <p>
+                        padding: 0.3in 0.9in 0 2in;
+                    </p>
+                </div>
+                <div style="padding-top: 50px; padding-left: 10dvw;">
+                    <p>
+                        padding-top: 50px; <br>
+                        padding-left: 10dvw;
+                    </p>
+                </div>
+            </section>
+            <hr>
+            <section class="mono" id="ejemplos-margin">
+                <div>
+                    <div style="margin: 50px;">
+                        <p>
+                            margin: 50px;
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div style="margin: 0.5cm 70px;">
+                        <p>
+                            margin: 0.5cm 70px;
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div style="margin: 0.3in 0.9in 0 2in;">
+                        <p>
+                            margin: 0.3in 0.9in 0 2in;
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div style="margin-top: 50px; margin-left: 10dvw;">
+                        <p>
+                            margin-top: 50px; <br>
+                            margin-left: 10dvw;
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section class="mono" id="ejemplos-border">
+                <div style="border: 5px solid black;">
+                    <p>
+                        border: 5px solid black;
+                    </p>
+                </div>
+                <div style="border: 0.3cm double red;">
+                    <p>
+                        border: 0.3cm double red;
+                    </p>
+                </div>
+                <div style="
+                    border-top: 10px dotted yellow;
+                    border-left: 20px solid blue;
+                ">
+                    <p>
+                        border-top: 10px dotted yellow; <br>
+                        border-left: 20px solid blue;
+                    </p>
+                </div>
+                <div style="
+                    border-width: 5px 20px;
+                    border-style: dashed ridge none dotted;
+                    border-color: green;
+                ">
+                    <p>
+                        border-width: 5px 20px; <br>
+                        border-style: dashed ridge none dotted; <br>
+                        border-color: green;
+                    </p>
+                </div>
+                <div style="
+                    border: 5px solid black;
+                    border-radius: 15px;
+                ">
+                    <p>
+                        border: 5px solid black; <br>
+                        border-radius: 15px;
+                    </p>
+                </div>
+            </section>
+        </section>
+        <section>
+            <h2>Manipulando la parte de adentro de la caja</h2>
+            <section>
+                <p>
+                    También podemos cambiar el tamaño del contenido! O por lo 
+                    menos intentarlo. Las propiedades 
+                    <span class="mono">width</span> y 
+                    <span class="mono">height</span> hacen exactamente eso. 
+                    Como dijimos antes, si 
+                    <span class="mono">box-sizing</span> es 
+                    <span class="mono">border-box</span>, los valores de 
+                    estas propiedades incluyen al padding y el borde.
+                    <br>
+                    Acá entramos un poco en terreno tormentoso. Si el tamaño 
+                    que le damos al contenido no es suficiente, el contenido 
+                    podría escaparse del contenedor, cosa que se conoce como 
+                    <em>overflow</em>. Si el tamaño que le damos es demasiado, 
+                    nos van a quedar agujeros medio raros.
+                </p>
+            </section>
+            <hr>
+            <section class="mono" id="ejemplos-width-height">
+                <div style="
+                    width: 500px;
+                    padding: 50px;
+                    border: 5px solid black;
+                ">
+                    <p>
+                        width: 500px; <br>
+                        padding: 50px; <br>
+                        border: 5px solid black;
+                    </p>
+                </div>
+                <div style="
+                    box-sizing: border-box;
+                    width: 500px;
+                    padding: 50px;
+                    border: 5px solid black;
+                ">
+                    <p>
+                        box-sizing: border-box; <br>
+                        width: 500px; <br>
+                        padding: 50px; <br>
+                        border: 5px solid black;
+                    </p>
+                </div>
+                <div style="
+                    width: 400px;
+                    height: 100px;
+                    padding: 50px;
+                    border: 5px solid black;
+                ">
+                    <p>
+                        width: 400px; <br>
+                        height: 100px; <br>
+                        padding: 50px; <br>
+                        border: 5px solid black; <br>
+                        Y más cosas que se empiezan a salir de la caja 
+                        porque es demasiado chica.
+                    </p>
+                </div>
+                <div style="
+                    overflow: hidden;
+                    width: 400px;
+                    height: 100px;
+                    padding: 50px;
+                    border: 5px solid black;
+                ">
+                    <p>
+                        overflow: hidden; <br>
+                        width: 400px; <br>
+                        height: 100px; <br>
+                        padding: 50px; <br>
+                        border: 5px solid black;
+                    </p>
+                </div>
+                <div style="
+                    overflow-y: scroll;
+                    width: 400px;
+                    height: 100px;
+                    padding: 50px;
+                    border: 5px solid black;
+                ">
+                    <p>
+                        overflow-y: scroll; <br>
+                        width: 400px; <br>
+                        height: 100px; <br>
+                        padding: 50px; <br>
+                        border: 5px solid black;
+                    </p>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <p>
+                    También existen propiedades 
+                    <span class="mono">min-width</span> y 
+                    <span class="mono">max-width</span> (y lo mismo para 
+                    <span class="mono">height</span>) que limitan los valores 
+                    de las propiedades anteriormente mencionadas. Ahora, ¿por 
+                    qué existen esas propiedades? ¿Por qué alguien pondría 
+                    un valor de width mayor al de max-width?
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2>Unidades y un flash de diseño receptivo</h2>
+            <section>
+                <p>
+                    Más atrás mencionamos muy al pasar algunas unidades que 
+                    se usan para los valores de las propiedades. Estas 
+                    unidades se distinguen en dos categorías:
+                </p>
+                <ul>
+                    <li>
+                        Absolutas: Indican la misma magnitud sin importar en 
+                        qué contexto aparezcan*. Son cm, mm, Q (&frac14mm), 
+                        in, pc, pt y px.
+                    </li>
+                    <li>
+                        Relativas: La magnitud que representan depende del 
+                        contexto. Ahora entramos más en detalle.
+                    </li>
+                </ul>
+                <p>
+                    Volviendo a <span class="mono">width</span> y 
+                    <span class="mono">max-width</span>, alguien podría 
+                    definir el ancho de un elemento con una unidad relativa 
+                    pero después ponerle un límite con una unidad absoulta.
+                    <br>
+                    De hecho, en este sitio, tenemos la regla
+                </p>
+                <div class="mono">
+                    <p>main {</p>
+                    <div class="tabbed">
+                        <p>max-width: 1000px;</p>
+                        <p>margin: auto;</p>
+                        <p>...</p>
+                    </div>
+                    <p>}</p>
+                </div>
+                <p>
+                    Como <span class="mono">main</span> por defecto tiene 
+                    <span class="mono">display: block</span>, por defecto 
+                    ocupa el ancho completo de su contenedor, en este caso 
+                    <span class="mono">body</span>. Sin embargo, con 
+                    <span class="mono">max-width: 1000px</span> hacemos que 
+                    eso solo aplique hasta cierto ancho y después queda fijo 
+                    para que la cosa se mantenga legible. Por último, 
+                    <span class="mono">margin: auto</span> pone los márgenes 
+                    laterales que correspondan para que el contenido quede 
+                    centrado.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2>Unidades relativas</h2>
+            <section>
+                <p>
+                    Las unidades relativas son las siguientes:
+                </p>
+                <ul>
+                    <li>
+                        <span class="mono">em</span> se refiere al tamaño de 
+                        la fuente del elemento al que se le aplica la regla*. 
+                        <span class="mono">2em</span> es el doble de ese 
+                        tamaño.
+                    </li>
+                    <li>
+                        <span class="mono">rem</span> se refiere al tamaño de 
+                        la fuente del elemento raíz.
+                    </li>
+                    <li>
+                        <span class="mono">vh</span> se refiere a la altura 
+                        del <em>viewport</em>, el rectángulo en el que se está 
+                        mostrando el sitio. <span class="mono">1vh</span> es 
+                        1% de ese tamaño. La versión para el ancho es 
+                        <span class="mono">vw</span>. Ver las versiones con 
+                        s, l y d.
+                    </li>
+                    <li>
+                        <span class="mono">vmin</span> la más chica entre 
+                        <span class="mono">vh</span> y 
+                        <span class="mono">vw</span>.
+                        <span class="mono">vmax</span> es la más grande.
+                    </li>
+                    <li>
+                        Los porcentajes se refieren a un porcentaje de la 
+                        propiedad en el elemento padre. Por ejemplo: 
+                        <span class="mono">width: 50%</span> representa 
+                        la mitad del ancho que el elemento padre.
+                    </li>
+                    <li>
+                        <span class="mono">fr</span> se usa para 
+                        específicamente para grids.
+                    </li>
+                </ul>
+                <p>
+                    Hay unas cuántas más mucho más específicas pero no son 
+                    muy comunes.
+                </p>
+            </section>
+            <hr>
+            <section>
+                <p>
+                    Estas "diapos" tienen tamaño de fuente 
+                    <span class="mono">1.5rem</span> para que sean más 
+                    legibles.
+                </p>
+                <br>
+                <div class="caja un-rem">
+                    <p>
+                        Esta caja tiene tamaño de fuente por defecto (1rem).
+                    </p>
+                    <p>
+                        <span class="un-rem">1 rem</span>
+                        <span class="dos-rem">2 rem</span>
+                        <span class="un-em">1 em</span>
+                        <span class="dos-em">2 em</span>
+                    </p>
+                </div>
+                <br>
+                <div class="caja dos-rem">
+                    <p>
+                        Esta caja tiene tamaño de fuente 2rem, lo cual 
+                        es el doble del tamaño por defecto. 
+                    </p>
+                    <p>
+                        <span class="un-rem">1 rem</span>
+                        <span class="dos-rem">2 rem</span>
+                        <span class="un-em">1 em</span>
+                        <span class="dos-em">2 em</span>
+                    </p>
+                </div>
+            </section>
+            <hr>
+            <section id="ejemplo-porcentaje">
+                <div class="caja">
+                    <div class="caja">
+                        <p>
+                            Ancho: 40% <br>
+                            Alto: 40% <br>
+                            Fuente: 50% <br>
+                        </p>
+                    </div>
+                    <p>
+                        Ancho: 50% <br>
+                        Alto: 400px <br>
+                        Fuente: 2rem <br>
+                    </p>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <div class="caja" style="
+                    width: 30vmax;
+                    height: 200px;
+                ">
+                    <p>Ancho: 30vmax</p>
+                </div>
+            </section>
+        </section>
+        <section>
+            <h2>Posición</h2>
+            <section>
+                
+            </section>
+        </section>
+    </main>
+</body>
+</html>
