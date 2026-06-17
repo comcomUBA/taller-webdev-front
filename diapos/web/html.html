@@ -430,20 +430,59 @@
             <hr>
             <section>
                 <h3>Formularios</h3>
-                <form>
-                    <label>Nombre</label>
-                    <input type="text" name="nombre" placeholder="Tu nombre">
+                <iframe name="tacho" id="tacho" style="display: none;"></iframe>
+                <form target="tacho" method="POST">
+                    <label for="nombre">Nombre</label>
+                    <input 
+                        type="text" 
+                        name="nombre" 
+                        placeholder="Tu nombre"
+                        id="nombre"
+                        required
+                    >
                     <br>
-                    <label>Edad</label>
-                    <input type="number" name="edad" placeholder="Tu edad">
+                    <label for="edad">Edad</label>
+                    <input 
+                        type="number" 
+                        name="edad" 
+                        placeholder="Tu edad"
+                        id="edad"
+                    >
                     <br>
-                    <label>¿Qué día es hoy?</label>
-                    <input type="date" name="fecha">
+                    <label for="fecha">¿Qué día es hoy?</label>
+                    <input type="date" name="fecha" id="fecha">
                     <br>
-                    <label>Acepto los términos y condiciones</label>
-                    <input type="checkbox" name="terminos">
+                    <label for="terminos">
+                        Acepto los términos y condiciones
+                    </label>
+                    <input 
+                        type="checkbox" 
+                        name="terminos" 
+                        id="terminos"
+                        required
+                    >
                     <br>
-                    <input type="submit" value="Enviar">
+                    <input type="submit" value="Enviar (a ningún lado)">
+                </form>
+                <br>
+                <form 
+                    action="https://taller-apis.cubawiki.com.ar/items"
+                    method="POST"
+                    target="tacho"
+                >
+                    <label for="value">
+                        ¡Mándenle un saludo al taller de APIs!
+                    </label>
+                    <input type="text" name="value" id="value" required>
+                    <br>
+                    <input 
+                        type="submit" 
+                        value="Enviar al taller de APIs"
+                    >
+                    <p>
+                        No hagan click más de una vez por favor, les 
+                        prometo que se envió.
+                    </p>
                 </form>
             </section>
             <hr>
