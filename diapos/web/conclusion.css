@@ -1,0 +1,50 @@
+header {
+    margin: 50px;
+
+    p {
+        text-align: center;
+        img {
+            height: 300px
+        };
+    }
+}
+
+@keyframes rotando {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.rotando {
+    animation: 4s linear infinite rotando;
+}
+
+.responsive {
+    color: red;
+    &::after {
+        content: "Tu pantalla es muy angosta";
+    }
+
+    @media (min-width: 700px) {
+        color: green;
+        &::after {
+            content: "Tu pantalla es muy intermedia";
+        }
+    }
+
+    @media (min-width: 1200px) {
+        color: blue;
+        &::after {
+            content: "Tu pantalla es muy ancha";
+        }
+    }
+}
+
+#el-popup {
+    margin: auto;
+    padding: 30px;
+}

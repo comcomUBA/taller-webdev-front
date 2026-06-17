@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de WebDev</title>
+
+    <link rel="stylesheet" href="https://lalten.github.io/lmweb/style/latinmodern-sans.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="diapos.css">
+    <link rel="stylesheet" href="conclusion.css">
+</head>
+<body>
+    <header>
+        <p>
+            <img 
+                src="https://i.ibb.co/Mk7nxFPN/Screenshot-20260616-224030.png" 
+                alt="
+                    Una captura de pantalla de una búsqueda en Google 
+                    Images de 'desarrollo web'.
+                "
+            >
+        </p>
+    </header>
+    <main>
+        <section>
+            <h2>¿Eso es todo?</h2>
+            <section>
+                <p>
+                    ¿Hasta ahí llegan HTML y CSS?
+                    <br>
+                    No, se puede hacer muchísimo más. Algunas cosas 
+                    interesantes que se pueden hacer solo con html y css:
+                </p>
+                <ul 
+                    class="flex" 
+                    style="flex-direction: column; align-items: start;"
+                >
+                    <li class="rotando">
+                        Animación y transiciones
+                    </li>
+                    <li class="responsive">
+                        Diseño responsive:
+                    </li>
+                    <li class="flex">
+                        <details>
+                            <summary>
+                                Un poco de interactividad (hagan click acá)
+                            </summary>
+                            <p>
+                                En general la interacción con el usuario es 
+                                trabajo de JavaScript, pero hay algunas cosas 
+                                que se pueden hacer directamente con HTML.
+                            </p>
+                            <button
+                                command="show-modal"
+                                commandfor="el-popup"
+                            >
+                                Hasta se pueden abrir popups.
+                            </button>
+                        </details>
+                        <dialog id="el-popup" closedby="any">
+                            <p>Esto es un popup jiju</p>
+                            <button
+                                command="close"
+                                commandfor="el-popup"
+                            >
+                                Cerrar
+                            </button>
+                        </dialog>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <h2>
+                Siguientes pasos. Más allá de HTML y CSS.
+            </h2>
+            <section>
+                <p>
+                    Pero definitivamente no hace falta quedarnos solo con 
+                    HTML y CSS. El siguiente paso es JavaScript. 
+                    <br>
+                    Si bien antes mencionamos que <em>técnicamente</em> se 
+                    puede hacer cualquier cosa con CSS y HTML, lo normal es 
+                    usar JavaScript, que sí es un lenguaje de programación 
+                    de propósito general. 
+                    <br>
+                    Aprender JS en realidad es aprender a programar, cosa que 
+                    les va a tocar hacer a lo largo de la carrera. Las 
+                    particularidades del lenguaje tienen mucho que ver con 
+                    que su propósito principal es el de ser el lenguaje de 
+                    los sitios web. 
+                    <br>
+                    <button onclick="alert('Guau, JavaScript!')">
+                        Este botón hace algo con JS
+                    </button>
+                    <br>
+                    También es muy popular TypeScript. Básicamente es 
+                    JavaScript pero estáticamente tipado.
+                    <br>
+                    Más recientemente, WebAssembly apareció como una especie 
+                    de alternativa / extensión de todo esto.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2>Herramientas, frameworks!</h2>
+            <section>
+                <p>
+                    Es probable que hayan escuchado hablar de React, 
+                    Angular, Tailwind, Bootstrap, o algún otro framework 
+                    popular. 
+                    <br>
+                    La realidad es que hay un montón de cosas que se 
+                    repiten en muchísimos sitios web. Menús, barras de 
+                    navegación, contenedores, tarjetas, botones, etc. Todo 
+                    esto puede ser bastante molesto de armar desde 0, por 
+                    lo que regularmente aparecen herramientas para evitar 
+                    reinventar la rueda cada vez.
+                    <br>
+                    Hay herramientas bien específicas que resuelven 
+                    problemas chiquitos, pero las más populares son los 
+                    frameworks. Estos frameworks exponen muchas partes útiles 
+                    para tomar y reutilizar, haciendo que el desarrollo del 
+                    sitio web sea mucho más ameno. No solo eso, sino que 
+                    también vienen con una "filosofía" de desarrollo. Cuando 
+                    se usan "bien", todos los sitios hechos con un mismo 
+                    framework deberían parecerse bastante desde el punto de 
+                    vista de la implementación.
+                    <br>
+                    Este concepto no es exclusivo para el desarrollo web, 
+                    existe en todos los campos de la programación e incluso 
+                    por fuera del mismo.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2>No nos olvidemos del backend</h2>
+            <section>
+                <p>
+                    Como mencionamos al principio de la clase, el front solo es 
+                    una cara del desarrollo web. El back es puede ser más o menos 
+                    importante dependiendo del caso. 
+                    <br>
+                    En la carrera de computación vemos un montón de temas que 
+                    conforman la base de lo que después se usa para desarrollar 
+                    la parte que no se ve de los sitios.
+                    <br>
+                    Un buen lugar para empezar es entender cómo se comunican dos 
+                    programas entre sí. Para esto se usan APIs, tema del cual 
+                    tenemos otro taller!
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2>Hasta acá</h2>
+            <section>
+                <p>
+                    Esperamos que hayan disfrutado el taller y que se hayan 
+                    llevado algo útil. También esperamos haberles despertado 
+                    la curiosidad y haberles dado ganas de profundizar en los 
+                    temas que de desarrollo web y las cosas que hacemos en la 
+                    facultad.
+                    <br>
+                    Recuerden que hay una comunidad enorme en esta facultad 
+                    y en este departamento, por lo que siempre se pueden 
+                    acercar y preguntar lo que quieran y va a haber gente 
+                    para contestarles con la mejor de las ondas.
+                    <br>
+                    También pueden conectar con mucha de esa gente de forma 
+                    virtual a través de los grupos de Telegram. Recomendamos 
+                    fuertemente estar en esos grupos para enterarse de todas 
+                    las actividades que se organizan regularmente, están 
+                    buenísimas.
+                    <br>
+                    <a href="https://t.me/comcomdcuba">
+                        Grupo de la ComCom
+                    </a>
+                    <br>
+                    <a href="https://t.me/+oDiLv44I7b5jMjZh">
+                        Grupo general del DC
+                    </a>
+                </p>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
