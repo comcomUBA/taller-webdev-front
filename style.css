@@ -1,45 +1,65 @@
 * {
     margin: 0;
     padding: 0;
-    text-align: center;
+
     font-family: sans-serif;
+}
+
+#site-container {
+    width: 100%;
+    height: 100dvh;
+
+    display: grid;
+    grid-template-rows: 20dvh auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header header    header   "
+        "diapos completar resueltos";
 }
 
 .text-box {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
 }
 
 header {
-    height: 20dvh;
+    grid-area: header;
 
-    color: white;
     background-color: mediumslateblue;
     box-shadow: inset 0 0 0 5px navy;
 
     font-size: 1.5em;
 }
 
-main {
-    height: 70dvh;
+#diapos {
+    grid-area: diapos;
 
-    color: black;
-    background-color: khaki;
-    box-shadow: inset 0 0 0 5px darkkhaki;
-
-    font-size: 5em;
-    font-weight: bolder;
+    background-color: rgb(113, 207, 113);
+    box-shadow: inset 0 0 0 5px green;
 }
 
-footer {
-    height: 10dvh;
+#completar {
+    grid-area: completar;
 
-    color: white;
-    background-color: crimson;
-    box-shadow: inset 0 0 0 5px maroon;
+    background-color: rgb(245, 140, 101);
+    box-shadow: inset 0 0 0 5px orangered;
+}
 
-    font-size: 1.5em;
+#resueltos {
+    grid-area: resueltos;
+
+    background-color: rgb(252, 124, 168);
+    box-shadow: inset 0 0 0 5px rgb(233, 34, 100);
 }
 
 a, a:visited {
