@@ -33,79 +33,107 @@
             <hr>
             <section>
                 <h3>Front-end</h3>
-                <p>
-                    <ul>
-                        <li>
-                            El desarrollo "front-end" es el trabajo de programar la interfaz que van a ver los usuarios cuando entran al sitio. 
-                        </li>
-
-                        <li>
-                            En general, el front-end se ocupa de la parte visual del sitio, pero también de la parte lógica que hace que el sitio sea interactivo.
-                        </li>
-                        
-                        <li>
-                            El código que vamos a desarrollar es un "cliente". Es decir, un programa que corre en la máquina del usuario y que se comunica con el servidor (host) para pedirle cosas a través de cierta "API".
-                        </li>
-                        <li>
-                            Este taller va a ser una introducción a front-end.
-                        </li>
-                    </ul>
-                    
-                </p>
+                <ul>
+                    <li>
+                        El desarrollo "front-end" es el trabajo de programar 
+                        la interfaz que van a ver los usuarios cuando entran 
+                        al sitio. 
+                    </li>
+                    <li>
+                        En general, el front-end se ocupa de la parte visual 
+                        del sitio, pero también de la parte lógica que hace 
+                        que el sitio sea interactivo.
+                    </li>
+                    <li>
+                        El código que vamos a desarrollar es un "cliente". 
+                        Es decir, un programa que corre en la máquina del 
+                        usuario y que se comunica con el servidor (host) para 
+                        pedirle cosas a través de cierta "API".
+                    </li>
+                    <li>
+                        Este taller va a ser una introducción a front-end.
+                    </li>
+                </ul>
             </section>
             <hr>
             <section>
                 <h3>¿Servidor? ¿API? Back-end</h3>
-                <p>
-                    <ul>
-                        <li>
-                            El desarrollo "back-end" es el trabajo de programar el servidor, la base de datos, la red, etc. Es decir, todo lo que no se ve pero que hace que el sitio funcione.
-                        </li>
-
-                        <li>
-                            Los sitios web más complejos suelen necesitar un back-end para funcionar. Esto se debe a que necesitan almacenar información, procesar datos, etc. Todo esto no puede hacerse en la máquina del usuario, sino que necesita un servidor que lo haga por ellos.
-                        </li>
-
-                        <li>
-                            Parcialmente por un tema de seguridad, sería super inseguro y pesado almacenar todas las cuentas y contraseñas en 
-                            las máquinas de los usuarios. Pero también el sitio mismo tiene que estar subido a algún lado para que la gente pueda acceder.
-                        </li>
-
-                        <li>
-                            Este taller no va a ser una introducción a back-end. (Para esto pueden ir al taller de APIs o Docker 😇)
-                        </li>
-                </p>
+                <ul>
+                    <li>
+                        El desarrollo "back-end" es el trabajo de programar el 
+                        servidor, la base de datos, la red, etc. Es decir, todo 
+                        lo que no se ve pero que hace que el sitio funcione.
+                    </li>
+                    <li>
+                        Los sitios web más complejos suelen necesitar un 
+                        back-end para funcionar. Esto se debe a que necesitan 
+                        almacenar información, procesar datos, etc. Todo esto 
+                        no puede hacerse en la máquina del usuario, sino que 
+                        necesita un servidor que lo haga por ellos.
+                    </li>
+                    <li>
+                        Parcialmente por un tema de seguridad, sería super 
+                        inseguro y pesado almacenar todas las cuentas y 
+                        contraseñas en las máquinas de los usuarios. Pero 
+                        también el sitio mismo tiene que estar subido a algún 
+                        lado para que la gente pueda acceder.
+                    </li>
+                    <li>
+                        Este taller no va a ser una introducción a back-end. 
+                        (Para esto pueden ir al taller de APIs o Docker 😇)
+                    </li>
+                </ul>
             </section>
         </section>
         <section>
             <h2>Volviendo al front...</h2>
             <section>
                 <p>
-                    <p><small>
-                        ¿Y qué significa "desarrollar front"? ¿Cómo se programan estos clientes? ¿Qué lenguaje y herramientas usamos?
-                    </small></p>
-                    Los sitios web corren en navegadores web. Estos son Chrome, Firefox, etc. 
+                    <small>
+                        ¿Y qué significa "desarrollar front"? ¿Cómo se 
+                        programan estos clientes? ¿Qué lenguaje y 
+                        herramientas usamos?
+                    </small>
+                    <br>
+                    Los sitios web corren en navegadores web. Estos son 
+                    Chrome, Firefox, etc. 
                     <br>
                     Estos navegadores entienden tres lenguajes:
                 </p>
                 <ul>
                     <li>
-                        <strong>HTML</strong>: Define la estructura del sitio, su contenido*. En principio esta es la parte más importante, todo lo demás depende e interactúa con esta información.
+                        <strong>HTML</strong>: Define la estructura del sitio, 
+                        su contenido*. En principio esta es la parte más 
+                        importante, todo lo demás depende e interactúa con 
+                        esta información.
                     </li>
                     <li>
-                        <strong>CSS</strong>: Define como se ve el sitio, su estilo. Tiene muchísimas opciones, lo cual lo hace bastante difícil de dominar, pero es necesario para hacer un sitio que no sea un texto negro sobre fondo blanco.
+                        <strong>CSS</strong>: Define como se ve el sitio, su 
+                        estilo. Tiene muchísimas opciones, lo cual lo hace 
+                        bastante difícil de dominar, pero es necesario para 
+                        hacer un sitio que no sea un texto negro sobre fondo 
+                        blanco.
                     </li>
                     <li>
-                        <strong>JavaScript</strong>: A diferencia de los anteriores*, este es un lenguaje de programación. Como tal, se ocupa de la lógica e interactividad del sitio. Es la parte más compleja de muchos de los sitios modernos y eleva las posibilidades a otro nivel.
+                        <strong>JavaScript</strong>: A diferencia de los 
+                        anteriores*, este es un lenguaje de programación. 
+                        Como tal, se ocupa de la lógica e interactividad del 
+                        sitio. Es la parte más compleja de muchos de los 
+                        sitios modernos y eleva las posibilidades a otro nivel.
                     </li>
                 </ul>
             </section>
             <hr>
             <section>
                 <p>
-                    En este taller vamos a ver solo HTML y CSS. Por separado ya son super potentes y explicar JavaScript implicaría enseñar a programar, para lo cual existe la carrera.
+                    En este taller vamos a ver solo HTML y CSS. Por 
+                    separado ya son super potentes y explicar JavaScript 
+                    implicaría enseñar a programar, para lo cual existe 
+                    la carrera.
                     <br>
-                    También, como veremos más adelante, muchas veces no se programa en estos lenguajes de forma directa. Pero nos estamos adelantando, arranquemos desde el principio.
+                    También, como veremos más adelante, muchas veces no se 
+                    programa en estos lenguajes de forma directa. Pero nos 
+                    estamos adelantando, arranquemos desde el principio.
                 </p>
             </section>
         </section>

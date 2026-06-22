@@ -24,68 +24,72 @@
             <section>
                 <p>
                     HTML es un lenguaje para armar documentos. 
-                    <ul>
-                        <li>
-                            "Hypertext" se refiere a los links que conectan los distintos sitios y documentos. 
-                        </li>
-                        <li>
-                            "Markup" se refiere a que se usa una sintaxis particular para marcar cómo se debería estructurar el contenido. 
-                        </li>
-                        <li>    
-                            Una de las maneras de definir dicha estructura es a través de <em>tags</em>, que son etiquetas que le dicen al navegador qué es (y como tiene que formatearse) cada parte del documento.
-                        </li>
-                    </ul>
                 </p>
+                <ul>
+                    <li>
+                        "Hypertext" se refiere a los links que conectan los 
+                        distintos sitios y documentos. 
+                    </li>
+                    <li>
+                        "Markup" se refiere a que se usa una sintaxis 
+                        particular para marcar cómo se debería estructurar 
+                        el contenido. 
+                    </li>
+                    <li>    
+                        Una de las maneras de definir dicha estructura 
+                        es a través de <em>tags</em>, que son etiquetas que 
+                        le dicen al navegador qué es (y como tiene que 
+                        formatearse) cada parte del documento.
+                    </li>
+                </ul>
             </section>
-
-
         </section>
-
         <section>
             <h2>Tags</h2>
-
             <section>
-                <p>
-                    Las tags tienen el siguiente formato:
-                    <ul>
-                        <li>
-                            <span class="mono">&lttag atributos/></span> para elementos sin contenido.
-
-                            <ul>
-                                <li>
-                                    "tag" es el nombre de la etiqueta, que define qué tipo de elemento es.
-                                    <br>
-                                    <span class="mono">&lttag p></span> es un párrafo, <span class="mono">&lttag h1></span> es un título, etc.
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <span class="mono">&lttag atributos>Contenido&lt/tag></span>
-
-                            <ul>
-                                <li>
-                                    "atributos" son pares clave-valor que le dan información extra al navegador sobre el elemento. Por ejemplo, el atributo "href" de un link le dice al navegador a qué página llevar al usuario cuando hace click.
-                                </li>
-                                <li>
-                                    "Contenido" es el texto o los elementos anidados dentro de la tag.
-                                </li>
-                                <li>
-                                    <span class="mono">&lttag a href="http://comcom.dc.uba.ar">Hola mundo&lt/a></span>
-                                    <br>
-                                    se ve así: "<a href="http://comcom.dc.uba.ar">Hola mundo</a>".
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    
-                </p>
+                <p>Las tags tienen el siguiente formato:</p>
+                <ul>
+                    <li>
+                        <span class="mono">
+                            &lttag atributos>Contenido&lt/tag>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="mono">&lttag atributos/></span> para 
+                        elementos sin contenido.
+                    </li>
+                </ul>
+                <p>Donde</p>
+                <ul>
+                    <li>
+                        "tag" es el nombre de la etiqueta, que define 
+                        qué tipo de elemento es. Algunos ejemplos son 
+                        <span class="mono">p</span>, 
+                        <span class="mono">h1</span>,
+                        <span class="mono">div</span>.
+                    </li>
+                    <li>
+                        "atributos" son pares clave-valor que le dan 
+                        información extra al navegador sobre el elemento. 
+                        Por ejemplo, el atributo "href" de un 
+                        <span class="mono">a</span> le dice al navegador a 
+                        qué página llevar al usuario cuando hace click.
+                    </li>
+                    <li>
+                        "Contenido" es el texto o los elementos anidados 
+                        (los "descendientes") dentro de la tag. Por ejemplo,
+                        <br> 
+                        <span class="mono">
+                            &lttag a href="http://comcom.dc.uba.ar">Hola mundo&lt/a>
+                        </span>
+                        <br>
+                        se ve así: 
+                        <a href="http://comcom.dc.uba.ar">Hola mundo</a>.
+                    </li>
+                </ul>
             </section>
-
             <hr>
             <section>
-                Ejemplos: 
-                <!-- perdon no soy html wizard no sabia que tag ponerle a ese ejemplos -->
                 <p class="mono">&ltsection></p>
                 <p class="mono tabbed">&lth3></p>
                 <h3>Esto es un título</h3>

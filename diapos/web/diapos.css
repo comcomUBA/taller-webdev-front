@@ -50,10 +50,6 @@ main {
                 > li::marker {
                     color: #8dc795;
                 }
-
-                ul {
-                    margin-left: 3ch;
-                }
             }
         }
     }
