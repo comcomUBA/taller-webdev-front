@@ -108,15 +108,22 @@
             <h2>Estructura principal</h2>
             <section>
                 <p>
-                    Las tags más importante que cualquier sitio debe tener son 
-                    <span class="mono">html</span>, <span class="mono">head</span>
-                    y <span class="mono">body</span>. La primera es la que define 
-                    los límites del documento, sin esa tag no existe nada. La 
-                    segunda es para definir información relevante al sitio pero que 
-                    no va a ser visible para el usuario, eso incluye metadatos y un 
-                    poco de información extra para que el navegador sepa como 
-                    interpretar el sitio. Por último, <span class="mono">body</span>
-                    es donde va el contenido del sitio, básicamente todo.
+
+                    <ul>
+                        <li>
+                            <span class="mono">html</span>: define 
+                            los límites del documento, sin esa tag no existe nada.
+                        </li>
+                        <li>
+                            <span class="mono">head</span>: acá van los 
+                            metadatos y otra información que no se ve en el 
+                            sitio.
+                        </li>
+                        <li>
+                            <span class="mono">body</span>: donde va todo 
+                            el contenido del sitio.
+                        </li>
+                    </ul>
                     <br>
                     Cualquier sitio normal sigue el siguiente esquema:
                 </p>
@@ -212,49 +219,63 @@
         <section>
             <h2>Estructura principal pero menos principal</h2>
             <section>
+                HTML viene con varios elementos para organizar el sitio, casi
+                todos bastante auto explicativos:
+                <ul>
+                    <li>
+                        <span class="mono">header</span>, <span class="mono">main</span>
+                        y <span class="mono">footer</span> para organizar el sitio en
+                        esas tres partes.
+                    </li>
+                    <li>
+                        <span class="mono">aside</span> para cosas que justamente
+                        deberían ir a un costado.
+                    </li>
+                    <li>
+                        <span class="mono">article</span> para artículos.
+                    </li>
+                    <li>
+                        <span class="mono">div</span> es un contenedor genérico que no
+                        representa nada por si mismo. Sin embargo, suele pasar que es el único elemento
+                        que se usa para organizar el sitio.
+                    </li>
+                </ul>
+                <br>
                 <p>
-                    HTML viene con los elementos 
-                    <span class="mono">header</span>, 
-                    <span class="mono">main</span> y 
-                    <span class="mono">footer</span> para organizar el sitio 
-                    en esas tres partes. También incluye cosas como 
-                    <span class="mono">aside</span> para cosas que justamente 
-                    deberían ir a un costado, 
-                    <span class="mono">article</span> para artículos, etc. 
-                    (todas bastante auto explicativas).
-                    <br>
-                    Sin embargo, suele pasar (y es discutible si es algo bueno 
-                    o malo) que el único elemento que se termina usando para 
-                    organizar el sitio es <span class="mono">div</span>. El 
-                    elemento justamente es un contenedor genérico que no 
-                    representa nada por si mismo.
-                    <br>
-                    Todos estos elementos tienen formato "block", que, ahora 
-                    mismo y sin entrar en detalles, significa que ocupan el 
-                    ancho entero del sitio. También implica otras cosas pero 
-                    todo eso va a importar más cuando nos pongamos con los 
-                    estilos.
+                    Todos estos elementos tienen formato "block", que, por 
+                    ahora, significa que ocupan el ancho entero del sitio. 
+                    (continuará...)
                 </p>
             </section>
             <hr>
             <section>
-                <p>
-                    Este documento sigue ese patrón de 
-                    <span class="mono">header</span>, 
-                    <span class="mono">main</span> y 
-                    <span class="mono">footer</span> y después divide el 
-                    resto en <span class="mono">section</span>s que a su 
-                    vez también están divididas en más 
-                    sub<span class="mono">section</span>s. Cada una de estas 
-                    cajas grandes son secciones y los textos divididos por 
-                    rayas son esas subsecciones. Esas rayas son el elemento 
-                    <span class="mono">hr</span> que se usa para separar cosas.
-                    <br>
-                    En particular, no se usa ningún 
-                    <span class="mono">div</span> (o por lo menos no hasta 
-                    este punto, todavía estoy escribiendo jiju (al final 
-                    si usé divs)).
-                </p>
+                <p>Este documento sigue ese mismo patrón:</p>
+                <ul>
+                    <li>
+                        <span class="mono">header</span>,
+                        <span class="mono">main</span> y
+                        <span class="mono">footer</span> para las tres partes
+                        principales.
+                    </li>
+                    <li>
+                        El resto se divide en <span class="mono">section</span>s:
+                        cada una de estas cajas grandes es una sección.
+                    </li>
+                    <li class="tabbed">
+                        Que a su vez se dividen en
+                        sub<span class="mono">section</span>s: los textos
+                        separados por rayas.
+                    </li>
+                    <li class="tabbed">
+                        Esas rayas son el elemento <span class="mono">hr</span>,
+                        que se usa para separar cosas.
+                    </li>
+                    <li>
+                        No se usa ningún <span class="mono">div</span> (o por lo
+                        menos no hasta este punto, todavía estoy escribiendo jiju
+                        (al final sí usé divs)).
+                    </li>
+                </ul>
             </section>
         </section>
         <section>
